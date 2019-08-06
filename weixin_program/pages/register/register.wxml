@@ -1,0 +1,25 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="field clearfix">
+      <label for="name">
+        <image src="../../images/zhanghu.png" />
+      </label>
+      <input id="mobile" name="mobile" class="login-input" type="text" placeholder="请输入手机号" bindinput='getPhoneValue' value='{{phone}}' />
+    </view>
+    <view class="field yzm clearfix">
+      <label for="password">
+        <image src="../../images/lock.png" />
+      </label>
+      <input id="code" name="code" class="login-input" type="text" placeholder="请输入验证码" />
+      <button class="get-code" disabled="{{disabled}}" data-id="2" bindtap="getCode">
+        {{time}}
+      </button>
+    </view>
+    <button class="btn_login" formType="submit" disabled="{{suddisabled}}">注册</button>
+  </form>
+  <view class="need_status flex-column">
+    <text>注意事项：</text>
+    <text>1、注册成功后下载量球匠app，登录账号为手机号，登录密码也为手机号码!</text>
+    <!-- <text>2、下载量球匠app，登录即可领取<text style="color:#F23A3A">226元大礼包！</text></text> -->
+  </view>
+</view>

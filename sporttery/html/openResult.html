@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="大乐透"/>
+    <title>开奖结果</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="stylesheet" href="../css/openResult.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/flexible.min.js"></script>
+    <script src="../js/random.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/openResult.js"></script>
+</head>
+<body>
+<div class="mask"></div>
+<img src="../images/gif.gif" alt="" class="loading">
+<div id="openresult">
+    <div class="title clearfix">
+        <div class="fl img">
+            <img src="../images/back.png" alt="" onclick="javascript:history.back(-1);">
+        </div>
+        <p class="fl">竞彩足球</p>
+        <div class="fr img tr more" data-flag="1">
+            <img src="../images/more.png" style="width: 60%" alt="">
+        </div>
+        <div class="pa more_list">
+            <ul>
+                <li><a href="openDetail.html">开奖查询</a></li>
+                <li><a href="raceStatus.html">玩法说明</a></li>
+                <li><a href="Lottery.html">兑换记录</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="result">
+        <!--<div class="detail_status">-->
+            <!--<div class="result_detail clearfix">-->
+                <!--<div class="fl clearfix">-->
+                    <!--<img class="fl" src="../images/defult.png" alt="">-->
+                    <!--<div class="fl pay_money">-->
+                        <!--<h1>竞彩足球</h1>-->
+                        <!--<p>自购20.00元</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<img class="fr" src="../images/success.png" alt="">-->
+            <!--</div>-->
+            <!--<ul class="clearfix win_status">-->
+                <!--<li>-->
+                    <!--<p>订单状态</p>-->
+                    <!--<span>已中奖</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<p>出票状态</p>-->
+                    <!--<span>已中奖</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<p>税后到账奖金</p>-->
+                    <!--<span>已中奖</span>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="result_con">-->
+            <!--<div class="result_con_title">-->
+                <!--<span>投注内容</span>-->
+                <!--<span class="chuanguan">单关</span>-->
+                <!--<span class="multiple">10倍</span>-->
+            <!--</div>-->
+            <!--<table>-->
+                <!--<tr>-->
+                    <!--<th>场次</th>-->
+                    <!--<th>主队 VS 客队</th>-->
+                    <!--<th>玩法</th>-->
+                    <!--<th>投注（赔率）</th>-->
+                    <!--<th>彩果</th>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<p>周一</p>-->
+                        <!--<span>013</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p>周一</p>-->
+                        <!--<p>周一</p>-->
+                        <!--<span>013</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p>周一</p>-->
+                        <!--<span>013</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p class="red">周一</p>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p class="red">周一</p>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>-->
+                        <!--<p>周一</p>-->
+                        <!--<span>013</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p>周一</p>-->
+                        <!--<p>周一</p>-->
+                        <!--<span>013</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p>周一</p>-->
+                        <!--<span>013</span>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p class="red">周一</p>-->
+                    <!--</td>-->
+                    <!--<td>-->
+                        <!--<p class="red">周一</p>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+        <!--</div>-->
+        <!--<div class="place_order">-->
+            <!--<p class="clearfix">-->
+                <!--<i></i>-->
+                <!--<span>下单时间：</span>-->
+                <!--<span>下单时间：</span>-->
+            <!--</p>-->
+            <!--<p class="clearfix">-->
+                <!--<i></i>-->
+                <!--<span>下单时间：</span>-->
+                <!--<span>下单时间：</span>-->
+            <!--</p>-->
+            <!--<p class="clearfix">-->
+                <!--<i></i>-->
+                <!--<span>下单时间：</span>-->
+                <!--<span>下单时间：</span>-->
+            <!--</p>-->
+            <!--<p class="clearfix">-->
+                <!--<i></i>-->
+                <!--<span>下单时间：</span>-->
+                <!--<span>下单时间：</span>-->
+            <!--</p>-->
+        <!--</div>-->
+        <div class="reault_append"></div>
+        <div class="continue">
+            <a href="bet.html">继续投注</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

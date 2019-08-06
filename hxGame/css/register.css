@@ -1,0 +1,130 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #fffdf0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/** {*/
+    /*-webkit-touch-callout: none; !*系统默认菜单被禁用*!*/
+    /*-webkit-user-select: none; !*webkit浏览器*!*/
+    /*-khtml-user-select: none; !*早期浏览器*!*/
+    /*-moz-user-select: none; !*火狐*!*/
+    /*-ms-user-select: none; !*IE10*!*/
+    /*user-select: none;*/
+/*}*/
+#register {
+    padding: 0.2rem 0.2rem 0.2rem;
+    height: 100%;
+
+    overflow: hidden;
+}
+#register .lqj{
+    height: 3rem;
+    background: url(../image/wenzi.png) center -1rem no-repeat;
+    background-size: 100%;
+}
+#register .title {
+    /*margin: 3.2rem 0rem 0rem;*/
+}
+#register .mobile, #register .agree,#register .submit {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#register .mobile{
+    margin-top: 0.45rem;
+}
+#register .mobile input {
+    font-size: 0.3rem;
+    padding: 0.2rem 0rem;
+    text-indent: 0.2rem;
+    width: 98%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    border: 1px solid #77BAFE;
+    float: left;
+    -webkit-user-select:auto;
+}
+
+#register .smsCode input {
+    width: 70%;
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
+    -webkit-user-select:auto;
+}
+#register a.obtain {
+    float: left;
+    width: 30%;
+    color: #1D8CFF;
+    padding: 0.2rem 0rem;
+    background: #EEEEEE;
+    border-radius: 0px 20px 20px 0px;
+    text-align: center;
+    height: 0.4rem;
+    margin-left: -0.2rem;
+    font-size: 0.3rem;
+}
+#register .agree{
+    margin: 0.2rem auto 0.4rem;
+}
+#register .agree input {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+#register .agree  span{
+    float: left;
+    font-size: 0.26rem;
+    margin: 0rem 0rem 0rem 0.1rem;
+}
+#register .agree  span a{
+    color: #1D8CFF;
+}
+
+#register .submit a {
+    display: inline-block;
+    font-size: 0.3rem;
+    padding: 0.2rem 0rem;
+    width: 100%;
+    margin: 0rem 0rem 0.3rem;
+    border-radius: 20px;
+    background: #F6081F;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 0.3rem;
+}
+#register .submit a i{
+    font-size: 0.34rem;
+    font-weight: bold;
+}
+#register .states{
+    font-size: 0.28rem;
+    padding: 0.1rem 0rem;
+}
+.lqj_states p{
+    line-height: 0.46rem;
+    font-size: 0.26rem;
+}
+#register .states img{
+    vertical-align: middle;
+    width: 6%;
+}
+.dalibao{
+    /*text-align: center;*/
+    font-size: 0.38rem;
+    color: #F5182D;
+    display: none;
+    padding: 0.3rem 0rem;
+}

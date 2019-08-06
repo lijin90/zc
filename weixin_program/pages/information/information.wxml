@@ -1,0 +1,14 @@
+<view class='information' style='opacity:0'  animation="{{animationData}}">
+  <view class='flex-row' wx:for="{{datalist}}" wx:for-index="index" wx:for-item="item" data-news_id="{{item.news_id}}" bindtap="changeName">
+    <view class="tp">
+      <image src='{{item.news_conver}}' lazy-load="true"></image>
+    </view>
+    <view class='con'>
+      <text class='title'>{{item.news_title}}</text>
+      <view class='time'>
+        <text>{{item.editor_create}}</text>
+        <text>{{item.news_provenance}}</text>
+      </view>
+    </view>
+  </view>
+</view>

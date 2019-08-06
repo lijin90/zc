@@ -1,0 +1,176 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#dlt {
+    width: 100%;
+    font-size: 0.28rem;
+}
+
+#dlt .title {
+    padding: 0.3rem 4%;
+    line-height: 1;
+    /*display: table-cell;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+}
+
+#dlt .title .more_list {
+    right: 0.02rem;
+    top: 0.6rem;
+    width: 2rem;
+    height: 1.9rem;
+    background: url(../images/xiala.png) no-repeat;
+    background-size: 100%;
+    display: none;
+}
+
+#dlt .title .more_list ul {
+    width: 80%;
+    margin: 0.25rem auto 0;
+    text-align: center;
+}
+
+#dlt .title .more_list ul li {
+    padding: 0.25rem 0rem;
+}
+
+#dlt .title .more_list ul li:nth-of-type(1) {
+    border-bottom: 1px solid #DEDEDE;
+}
+
+#dlt .title .more_list ul li a {
+    font-size: 0.3rem;
+}
+
+#dlt .title .inform {
+    width: 80%;
+    font-size: 0.3rem;
+}
+
+#dlt .title .more {
+    width: 12%;
+}
+
+#dlt .title_bg {
+    background: #EEEEEE;
+    font-size: 0.32rem;
+}
+
+#dlt .title_bg span {
+    color: #FF5961;
+}
+
+#dlt .red_select, #dlt .blue_select {
+    padding: 0.3rem 0rem 0.3rem 4%;
+}
+
+#dlt .blue_select {
+    margin-bottom: 1rem;
+}
+
+#dlt .red_select ul li, #dlt .blue_select ul li {
+    float: left;
+    width: 0.7rem;
+    text-align: center;
+    line-height: 0.7rem;
+    border: 1px solid #FF5961;
+    color: #FF5961;
+    border-radius: 50%;
+    margin: 0rem 3.8% 0.3rem 0rem;
+}
+
+#dlt .blue_select ul li {
+    border: 1px solid #1E8CFF;
+    color: #1E8CFF;
+}
+
+#dlt .footer {
+    border-top: 1px solid #D3D3D3;
+    width: 7rem;
+    position: fixed;
+    bottom: 0px;
+    padding: 0.3rem 0.25rem;
+    z-index: 999;
+    background: #fff;
+}
+
+#dlt .footer img {
+    width: 0.4rem;
+}
+
+#dlt .random {
+    margin: 0rem 0.5rem;
+    color: #999999;
+}
+
+#dlt .random, #dlt .remove {
+    margin-top: 0.12rem;
+}
+
+#dlt .random img {
+    width: 0.6rem;
+    vertical-align: middle;
+    animation: shaking 0.25s linear infinite;
+    -webkit-animation: shaking 0.25s linear infinite;
+}
+
+@keyframes shaking {
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+#dlt .touzhu p {
+    margin: 0.05rem 0rem;
+    font-size: 0.30rem;
+    font-weight: bold;
+}
+
+#dlt .touzhu p i {
+    color: #FF5961;
+}
+
+#dlt .btn {
+    margin-top: 0.2rem;
+}
+
+#dlt .btn a {
+    padding: 0.2rem 0.5rem;
+    background: #FF5961;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.32rem;
+}
+
+.red {
+    background: #FF5961;
+    color: #fff !important;
+}
+
+.blue {
+    background: #1E8CFF;
+    color: #fff !important;
+}

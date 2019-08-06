@@ -1,0 +1,86 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #EEEEEE;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#detail{
+    background: #EEEEEE;
+}
+#detail .title{
+    padding: 0.2rem 0.2rem;
+    font-size: 0.3rem;
+    letter-spacing: 2px;
+    color: #ACACAC;
+}
+.winning_Numbers{
+    background: #fff;
+    padding: 0.15rem  0.15rem;
+    box-shadow: 2px 2px 5px #ccc;
+}
+.winning_Numbers ul{
+    width: 80%;
+    margin: 0.3rem auto 0.3rem;
+}
+.winning_Numbers ul li{
+    float: left;
+    width:0.7rem;
+    text-align: center;
+    line-height: 0.7rem;
+    border-radius: 50%;
+    background:#FE5960;
+    color: #fff;
+    margin: 0rem 0.06rem;
+}
+.winning_Numbers ul li:nth-child(n+6){
+    background: #1E8CFF;
+}
+.status{
+    font-size: 0.26rem;
+}
+.status span em{
+    color:#FE5960;
+}
+.table{
+    background: #fff;
+    margin-top: 0.1rem;
+}
+.table table{
+    width: 100%;
+    text-align: center;
+}
+.table table tr th,.table table tr td{
+    padding: 0.2rem 0rem;
+}
+.table table tbody tr{
+    border-bottom: 1px solid #E7E7E7;
+}
+.table table tbody tr td:nth-of-type(2){
+    color: #F80B0B;
+}
+.btn{
+    width: 90%;
+    margin: 2rem auto 0rem;
+}
+.btn a{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0rem;
+    font-size: 0.36rem;
+    background:#FE5960;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 6px;
+}

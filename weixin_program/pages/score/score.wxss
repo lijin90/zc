@@ -1,0 +1,123 @@
+.container {
+  padding: 0px 0px;
+}
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #f7f7f7;
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-item {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav-item.active {
+  color: #419BFF;
+}
+
+.tab-box {
+  width: 100%;
+  background: greenyellow;
+  padding-top: 80rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.tab-content {
+  overflow-y: scroll;
+}
+
+.scoll-h {
+  height: 100%;
+  font-size: 14px;
+  margin-top: 80rpx;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoll-h .time {
+  padding: 8px 10px;
+  background: #cecece;
+  font-size: 14px;
+}
+
+.scoll-h .every_time {
+  width: 12%;
+}
+
+.scoll-h .team {
+  width: 30%;
+  color: #323232;
+}
+.scoll-h .team:nth-of-type(2){
+  width: 40%
+}
+.scoll-h .team .qufen {
+  color: #9b9b9b;
+}
+
+.scoll-h .team .score {
+  font-size: 18px;
+}
+
+.scoll-h .team image {
+  width: 30px;
+  height: 30px;
+}
+
+.scoll-h .bifen_list {
+  padding: 12px 0px;
+  border-bottom: 1px solid #cecece;
+}
+.lun_time{
+  line-height: 28px;
+}
+.nothing {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #fd7d16;
+}
+
+.nothing image {
+  width: 55px;
+  height: 72px;
+}

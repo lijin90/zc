@@ -1,0 +1,61 @@
+<view class="container {{show?'hide':''}}">
+  <view class="detail">
+    <view class='ai'>
+      <view style="margin-right:5px">
+        <image src="{{info.head_img_url}}"></image>
+      </view>
+      <view style="display: flex;flex-direction:column">
+        <text style="margin:2px 0px 0px;color:#323232">{{info.nickname}}</text>
+        <view>
+        <text style="font-size:12px;">人工智能专家</text>
+        </view>
+      </view>
+    </view>
+    <block wx:for="{{info.item}}" wx:for-item="items">
+      <view class='team'>
+        <view class="flex-column">
+          <image wx:if="{{items.a_icon.length!=0}}" src="{{items.a_icon}}"></image>
+           <image wx:else src="../../images/default1.png"></image>
+          <text>{{items.a}}</text>
+        </view>
+        <view class="bifen flex-column" wx:if="{{items.status_id==4}}" style="font-size:22px">
+          <text>{{items.season_fs_a}} - {{items.season_fs_b}}</text>
+        </view>
+        <view class="bifen flex-column" wx:else>
+          <text style="margin:0px 0px 6px;">VS</text>
+          <text>{{items.pt}}</text>
+        </view>
+        <view class="flex-column">
+            <image wx:if="{{items.b_icon.length!=0}}" src="{{items.b_icon}}"></image>
+           <image wx:else src="../../images/default1.png"></image>
+          <text>{{items.b}}</text>
+        </view>
+      </view>
+      <view class="table">
+        <view class="left">{{items.odds_num}}</view>
+        <view class="right">
+          <view class="btm">0</view>
+          <view class="btm {{red4==true?'red':''}}">{{items.h_w}}</view>
+          <view class="btm {{red5==true?'red':''}}">{{items.h_d}}</view>
+          <view class="btm {{red6==true?'red':''}}" style="border-right:none">{{items.h_l}}</view>
+          <view>-1</view>
+          <view class="{{red1==true?'red':''}}">{{items.hh_w}}</view>
+          <view class="{{red2==true?'red':''}}">{{items.hh_d}}</view>
+          <view class="{{red3==true?'red':''}}" style="border-right:none">{{items.hh_l}}</view>
+        </view>
+      </view>
+    </block>
+    <view class='time_tui' style="display: flex;flex-direction:row;justify-content: space-between;">
+      <view style="width:40%">
+        <view>{{info.t}}发布</view>
+        <view>分 析 内 容：</view>
+      </view>
+      <view wx:if="{{info.ts_id==1&&info.is_pay ==0&& info.status_id!=4}}" style="color:#FF7C39;width:58%">
+        {{info.title}}
+      </view>
+    </view>
+    <view class="tuijian" wx:if="{{info.is_open==true}}">
+      <text> {{info.detail}}</text>
+    </view>
+  </view>
+</view>

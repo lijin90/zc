@@ -1,0 +1,75 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#record{
+    background: #EEEEEE;
+}
+#record .nothing{
+    text-align: center;
+    margin: 4rem auto 0rem;
+    background: #fff;
+    display: none;
+}
+#record .nothing a{
+    color:#F80627;
+    text-decoration: underline;
+}
+#record .list{
+    /*display: none;*/
+}
+#record .title{
+    padding: 0.3rem 0.2rem;
+    font-size: 0.3rem;
+}
+#record .title span.red{
+    color: #FE5960;
+}
+.record_list{
+    border-bottom: 1px solid #B2B2B2;
+    background: #fff;
+    box-shadow: 1px 1px 5px  #B2B2B2;;
+}
+.record_list ul{
+    padding: 0.3rem 0rem 0.15rem 4%;
+}
+.record_list ul li{
+    float: left;
+    width: 0.7rem;
+    line-height: 0.7rem;
+    text-align: center;
+    background: #FE5960;
+    border-radius: 50%;
+    margin:0rem 4.4% 0.15rem 0rem;
+    color: #fff;
+}
+.record_list ul li.blue{
+    background: #1E8CFF;
+}
+.record_status{
+    padding: 0.25rem 4% 0.25rem 4%;
+    border-top: 1px solid #EDEDED;
+    line-height: 0.42rem;
+    font-size: 0.3rem;
+    color: #000;
+}
+.record_status span i{
+    color: #FE5960;
+}
+.success{
+    background:#fff url(../images/success.png) center center no-repeat;
+    background-size: 40%;
+}

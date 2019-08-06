@@ -1,0 +1,86 @@
+<view class="expert">
+  <view class="flex-column list_expert" wx:for="{{datalist}}">
+    <view class="flex-row expert_image">
+      <image src="{{item.icon}}"></image>
+      <view class="flex-column">
+        <text>{{item.nickname}}</text>
+        <text>人工智能专家</text>
+      </view>
+    </view>
+    <view class="introduce">
+      {{item.out_description}}
+    </view>
+  </view>
+  <view class="flex-column list_expert">
+    <view class="flex-row expert_image">
+      <image src="https://qsr-app.oss-cn-shenzhen.aliyuncs.com/icon/icon9.png"></image>
+      <view class="flex-column">
+        <text>铁马精英团</text>
+        <text>人工智能专家</text>
+      </view>
+    </view>
+    <view class="introduce">
+      《量球匠》资深专家拥有大数据分析团队，擅长联赛：意甲、法乙、英超。
+    </view>
+  </view>
+  <view class="flex-column list_expert">
+    <view class="flex-row expert_image">
+      <image src="https://qsr-app.oss-cn-shenzhen.aliyuncs.com/icon/icon12.png"></image>
+      <view class="flex-column">
+        <text>足彩纳税人</text>
+        <text>人工智能专家</text>
+      </view>
+    </view>
+    <view class="introduce">
+      《量球匠》独家特邀大咖，擅长联赛：英超、意甲、德甲、西甲、小联赛。
+    </view>
+  </view>
+  <view class="flex-column list_expert">
+    <view class="flex-row expert_image">
+      <image src="https://qsr-app.oss-cn-shenzhen.aliyuncs.com/icon/icon8.png"></image>
+      <view class="flex-column">
+        <text>广佬彩人生</text>
+        <text>人工智能专家</text>
+      </view>
+    </view>
+    <view class="introduce">
+      《量球匠》资深专家，擅长联赛：意甲、德甲、法甲。
+    </view>
+  </view>
+  <view class="flex-column list_expert">
+    <view class="flex-row expert_image">
+      <image src="https://qsr-app.oss-cn-shenzhen.aliyuncs.com/icon/icon11.png"></image>
+      <view class="flex-column">
+        <text>彩愚</text>
+        <text>人工智能专家</text>
+      </view>
+    </view>
+    <view class="introduce">
+      《量球匠》独家签约大咖，8年潜心钻研德甲、英超、西甲赛事，专注于球队的动态，精通与擅长比分预测分析，视觉独到观点一针见血，实力结合数据分析盘面，有完整的系统方法。擅长联赛：德甲、英超、西甲、小联赛。
+    </view>
+  </view>
+  <view class="flex-column list_expert">
+    <view class="flex-row expert_image">
+      <image src="https://qsr-app.oss-cn-shenzhen.aliyuncs.com/icon/icon10.png"></image>
+      <view class="flex-column">
+        <text>答案433</text>
+        <text>人工智能专家</text>
+      </view>
+    </view>
+    <view class="introduce">
+      《量球匠》独家签约大咖，擅长联赛：英超、德甲、西甲。
+    </view>
+  </view>
+  <view class="flex-column list_expert">
+    <view class="flex-row expert_image">
+      <image src="https://qsr-app.oss-cn-shenzhen.aliyuncs.com/icon/icon7.png"></image>
+      <view class="flex-column">
+        <text>实战深似海</text>
+        <text>人工智能专家</text>
+      </view>
+    </view>
+    <view class="introduce">
+      《量球匠》独家签约大咖，擅长联赛：西甲、法甲、英超。
+    </view>
+  </view>
+</view>

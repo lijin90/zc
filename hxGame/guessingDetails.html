@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="和讯猜球"/>
+    <title>竞猜详情</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/guessingDetails.css">
+    <script src="js/flexible.min.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="detail" v-cloak>
+    <div class="content">
+        <header class="header">
+            <div flex="dir:right" class="header-title">
+                <div flex="main:center cross:center" id="guessingHistory">竞猜历史</div>
+            </div>
+            <div flex="dir:left main:justify" class="team-main">
+                <div flex="dir:top cross:center">
+                    <div flex="main:center cross:center" class="team-icon">
+                        <img v-if="detail.length!=0" :src="detail.a_icon" alt="">
+                        <img v-else src="image/defult.png" alt="">
+                    </div>
+                    <div flex="main:center cross:center" class="team-name">{{detail.team_a}}</div>
+                </div>
+                <div flex="dir:top cross:center">
+                    <span class="fz28">{{detail.lea_name}}</span>
+                    <div class="vs">{{detail.score_a}}-{{detail.score_b}}</div>
+                    <div flex="main:center cross:center" class="deadline">{{detail.m_d}} {{detail.h_m}} 截止</div>
+                </div>
+                <div flex="dir:top cross:center">
+                    <div flex="main:center cross:center" class="team-icon">
+                        <img v-if="detail.length!=0" :src="detail.b_icon" alt="">
+                        <img v-else src="image/defult.png" alt="">
+                    </div>
+                    <div flex="main:center cross:center" class="team-name">{{detail.team_b}}</div>
+                </div>
+            </div>
+            <ul class="guessinghistory">
+                <li flex="dir:left cross:center">
+                    <div flex="dir:top">
+                        <span class="title">竞猜状态</span>
+                        <span class="fz32" v-if="detail.status_id != 4 || detail.gues_result_id == ''">待开奖</span>
+                        <span class="fz32"
+                              v-else-if="detail.status_id == 4 && detail.current_result_id == detail.gues_result_id">中奖</span>
+                        <span class="fz32" v-else>未中奖</span>
+                    </div>
+                </li>
+                <li flex="dir:left cross:center">
+                    <div flex="dir:top">
+                        <span class="title">投注内容&金额</span>
+                        <span class="fz32" v-if="detail.gues_type_id == 1">主队{{detail.result_description}} & {{detail.bets_amount}}金币</span>
+                        <span class="fz32" v-else="detail.gues_type_id == 2">主队{{detail.result_description}} 让 {{detail.hhad_fixed}} 球 & {{detail.bets_amount}}金币</span>
+                    </div>
+                </li>
+                <li flex="dir:left cross:center">
+                    <div flex="dir:top">
+                        <span class="title">竞猜结果</span>
+                        <span class="fz32" v-if="detail.status_id != 4">待开奖</span>
+                        <span class="fz32" v-else-if="detail.status_id == 4 && detail.gues_type_id == 1">主队{{detail.current_result}}</span>
+                        <span class="fz32" v-else-if="detail.status_id == 4 && detail.gues_type_id == 2">主队{{detail.current_result}} 让 {{detail.hhad_fixed}} 球</span>
+                    </div>
+                </li>
+                <li flex="dir:left cross:center">
+                    <div flex="dir:top">
+                        <span class="title">猜中可返金币 & 赔率</span>
+                        <span class="fz32">{{detail.bets_amount}}*{{detail.current_odds}}</span>
+                    </div>
+                </li>
+                <li flex="dir:left cross:center">
+                    <div flex="dir:top">
+                        <span class="title">竞猜时间</span>
+                        <span class="fz32">{{detail.bets_time}}</span>
+                    </div>
+                </li>
+            </ul>
+        </header>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("#guessingHistory").click(function () {
+        window.history.back(-1)
+    })
+</script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/guessingDetails.js"></script>
+</html>

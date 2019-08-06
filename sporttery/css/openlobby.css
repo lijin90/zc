@@ -1,0 +1,65 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #EEEEEE;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#openlobby .list{
+    width: 96%;
+    padding:0.2rem 2%;
+    float: left;
+    background: #fff;
+    border-bottom: 1px solid #EFEFEF;
+}
+#openlobby .list .status{
+    margin: 0rem 0rem 0.2rem;
+}
+#openlobby .list .arrow{
+    height: 0.7rem;
+    line-height: 100%;
+    background: url(../images/arrow_icon.png)100% center no-repeat;
+}
+#openlobby .list ul li{
+    float: left;
+    width: 0.7rem;
+    text-align: center;
+    line-height: 0.7rem;
+    color: #fff;
+    border-radius: 50%;
+    background: #FE5960;
+    margin: 0rem 0.1rem;
+}
+#openlobby .list ul li:nth-child(n+6){
+    background: #1E8CFF;
+}
+#openlobby .list i{
+    font-size: 0.26rem;
+    color: #989898;
+}
+#openlobby .list .zc{
+    font-size: 0.26rem;
+    color: #989898;
+    letter-spacing: 1px;
+    line-height: 0.7rem;
+}
+#openlobby .list p.title{
+    font-size: 0.36rem;
+}
+#openlobby .list p.time{
+    font-size: 0.26rem;
+    color: #747474;
+}
+#openlobby .list .zc em{
+    color: #FE5960;
+}

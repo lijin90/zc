@@ -1,0 +1,101 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#change .bgtp{
+    padding: 0.2rem 0.2rem;
+    height:3rem;
+    background: url("../images/bgtp.png") no-repeat ;
+    background-size: 100%;
+    color: #fff;
+    font-size: 0.26rem;
+}
+#change .bgtp span{
+    display: inline-block;
+    margin: 0.14rem 0rem;
+}
+#change .bgtp .head img{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.15rem;
+}
+#change .con{
+    width: 80%;
+    margin: -1.5rem auto 0.6rem;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #EBEBEB;
+    box-shadow: 0px 0px 3px #EBEBEB;
+    padding: 0.35rem 0.2rem 0rem;
+}
+#change .con h1{
+    font-size: 0.32rem;
+    text-align: center;
+    color: #666666;
+    
+}
+#change .con p{
+    color: #999999;
+    text-align: center;
+    font-size: 0.3rem;
+    margin: 0.35rem 0rem 1rem;
+    line-height: 0.4rem;
+    text-align: left;
+}
+#change .con input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #DDDDDD;
+    color: #333333;
+    outline: none;
+    font-size: 0.36rem;
+}
+#change .con img{
+    width: 75%;
+    margin: 0.5rem auto ;
+}
+#change .process{
+    width: 80%;
+    vertical-align: middle;
+    margin: 0.5rem auto;
+}
+#change .process div.img_text{
+    text-align: center;
+    font-size: 0.24rem;
+    width: 23%;
+}
+#change .process .single{
+    margin: 0.25rem 0.2rem 0rem;
+    width: 8%;
+}
+#change .process div.img_text img{
+    width:55%;
+    margin-bottom: 0.1rem;
+}
+#change .status{
+    width: 80%;
+    margin: 0.3rem auto 0.5rem;
+    line-height: 0.4rem;
+    font-size: 0.3rem;
+    color: #B6B6B6;
+}
+#change .biao_tp{
+    width: 80%;
+    margin: 0.2rem auto;
+}
+#change .biao_tp img{
+    width: 80%;
+}

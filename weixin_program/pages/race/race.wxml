@@ -1,0 +1,57 @@
+<view style='opacity:0'  animation="{{animationData}}">
+  <view class="flex-wrp week_day" style="display: flex;flex-flow: row;justify-content:space-around; align-items:center">
+    <text class="{{activeIndex==index?'active':''}}" wx:for="{{weeks}}" wx:for-item="item" wx:for-index="index" data-index="{{index}}" bindtap="selected" style="width:100%;text-align:center">{{item.day}}</text>
+  </view>
+  <view class="common">
+    <view class="common_list flex-wrp" wx:for="{{datalist}}" wx:for-item="item" wx:for-index="index" style="display: flex;flex-direction: column;">
+      <view class="list flex-wrp" style="display: flex;flex-flow: row;justify-content:space-around">
+        <view class='league_wid'>
+          <text class="league" style="background:#{{item.back_ground}}">{{item.l_cn_abbr}}</text>
+          <text>{{item.num}}</text>
+        </view>
+        <view class='flex-wrp clash' style="display: flex;flex-flow: row;justify-content:space-around">
+          <text>{{item.h_cn}}</text>
+          <text>{{item[3].prs_name}}</text>
+          <text>{{item.a_cn}}</text>
+        </view>
+      </view>
+      <view id="panel" class="flex-column">
+        <view class="flex-cell flex-row table_top">
+          <rich-text class="flex-cell flex-row">胜平负</rich-text>
+          <rich-text class="flex-cell flex-row">让球</rich-text>
+          <rich-text class="flex-cell flex-row">比分</rich-text>
+          <rich-text class="flex-cell flex-row">总进球</rich-text>
+          <rich-text class="flex-cell flex-row">半全场</rich-text>
+        </view>
+        <view class="flex-row flex-cell table_down">
+          <rich-text class="flex-cell flex-row">
+            <view>{{item[1].prs_name}}</view>
+            <view>{{item[1].odds}}</view>
+          </rich-text>
+          <rich-text class="flex-cell flex-row">
+            <view>{{item[2].prs_name}}</view>
+            <view>{{item[2].odds}}</view>
+          </rich-text>
+          <rich-text class="flex-cell flex-row">
+            <view>{{item[3].prs_name}}</view>
+            <view>{{item[3].odds}}</view>
+          </rich-text>
+          <rich-text class="flex-cell flex-row">
+            <view>{{item[4].prs_name}}</view>
+            <view>{{item[4].odds}}</view>
+          </rich-text>
+          <rich-text class="flex-cell flex-row">
+            <view>{{item[5].prs_name}}</view>
+            <view>{{item[5].odds}}</view>
+          </rich-text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='common nothing' wx:if="{{show==true}}">
+    <view>
+      <image src='../../images/nothing.png'></image>
+    </view>
+    <view>暂无数据</view>
+  </view>
+</view>

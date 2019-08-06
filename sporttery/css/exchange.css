@@ -1,0 +1,159 @@
+html {
+     font-size: 100px;
+     line-height: initial;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+     height: 100%;
+ }
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#exchange{
+    padding: 0.2rem 0.2rem;
+    height: 100%;
+}
+#exchange .select li{
+    float: left;
+    width: 47%;
+    text-align: center;
+    line-height: 0.8rem;
+    border: 1px solid #E6E6F6;
+    border-radius: 6px;
+
+}
+#exchange .select li:nth-of-type(1){
+    margin: 0rem 4% 0rem 0rem;
+}
+#exchange .select li a{
+    font-size: 0.34rem;
+    color: #1E8CFF;
+}
+#exchange .list{
+    margin:0.2rem 0rem;
+    /*padding: 0.2rem 0rem;*/
+    border: 1px solid #E6E6F6;
+    border-radius: 6px;
+    height: 75%;
+}
+.orderCoin{
+    display: -ms-flexbox;
+    display: flex;
+    height: 1.04rem;
+    line-height: 1.04rem;
+    font-size: .3rem;
+    border-bottom: 1px solid #dee6ff;
+}
+.orderCoinType{
+    -ms-flex: 1;
+    flex: 1;
+    color: #5980ff;
+    margin-left: .2rem;
+}
+.coinLine{
+    width: .04rem;
+    height: .6rem;
+    background: #dee6ff;
+    margin-top: .23rem;
+}
+.orderList{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 8.9rem;
+}
+.orderList ul{
+    padding-bottom: 1.5rem;
+}
+.orderNum{
+    position: relative;
+    padding: .2rem;
+    font-size: .36rem;
+    border-bottom: 1px dashed #dee6ff;
+}
+.orderDel{
+    position: absolute;
+    background: url(../images/close.png) no-repeat;
+    background-size: 100% 100%;
+    width: .33rem;
+    height: .34rem;
+    top: .2rem;
+    right: .08rem;
+    border: .2rem solid transparent;
+}
+.orderLi{
+    margin-right: .5rem;
+    line-height: 1.2;
+}
+.mr20{
+    margin-right: .2rem;
+}
+.red{
+    color: #ff5961;
+}
+.blue{
+    color: #5980ff;
+}
+.orderDesc{
+    margin-top: .2rem;
+    color: #8d8d8d;
+    font-size: .28rem;
+}
+.orderDesc i{
+    margin-left: .5rem;
+}
+.noneText{
+    margin-top: .5rem;
+    text-align: center;
+    color: #ff5961;
+    font-size: .28rem;
+}
+.bottomWrapper{
+    width: 7.1rem;
+    position: fixed;
+    bottom: .28rem;
+}
+.btnAgree{
+    display: -ms-flexbox;
+    display: flex;
+    margin: .2rem 0;
+    width: 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.agreeText{
+    float: left;
+    margin-top: .03rem;
+    margin-left: .1rem;
+    color: #000;
+    font-size: .28rem;
+}
+.agreeLink{
+    color: #5980ff;
+}
+.check{
+    float: left;
+    background: url(../images/right.png) no-repeat;
+    background-size: 100% 100%;
+    width: .34rem;
+    height: .34rem;
+}
+.btnSubmit {
+    width: 90%;
+    margin: 0 auto;
+    background: #ff5961;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    border-radius: .1rem;
+    color: #fff;
+    font-size: .38rem;
+}
+.grayBg{
+     background: #c2c2c2;
+ }

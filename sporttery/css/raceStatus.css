@@ -1,0 +1,58 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#raceStatus .title {
+    background: #1E8CFF;
+    padding: 0.2rem 0.2rem;
+}
+
+#raceStatus  .title p {
+    text-align: center;
+    width: 90%;
+    /*line-height: 0.53rem;*/
+    font-size: 0.42rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#raceStatus  .img {
+    width: 8%;
+    height: 0.53rem;
+    line-height: 0.53rem;
+}
+
+#raceStatus  .title .img img {
+    width: 40%;
+}
+.raceStatus_con{
+    padding: 0.2rem 0.2rem;
+}
+.raceStatus_con p{
+    font-size: 0.28rem;
+    line-height: 0.36rem;
+    margin-bottom: 0.1rem;
+}
+.raceStatus_con p i{
+    /*display: inline-block;*/
+    float: left;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0.14rem 0.12rem 0rem 0rem;
+    background: #1E8CFF;
+}

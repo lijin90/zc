@@ -1,0 +1,154 @@
+body{
+    background: url("../image/background.jpg") repeat-y;
+    background-size: 100%;
+}
+.container {
+    color: #FFFFFF;
+}
+.fz28 {
+    font-size: .28rem;
+}
+.fz24 {
+    font-size: .24rem;
+}
+.fz32 {
+    font-size: .32rem;
+}
+.ml-1 {
+    margin-left: -.1rem;
+}
+.highlight {
+    color: #FFCC1B;
+}
+.tar {
+    text-align: right;
+}
+.content {
+    width:100%;
+    /*height: 100vh;*/
+    /*overflow: auto;*/
+    /*background:url("../image/background.jpg") repeat-y;*/
+    /*background-size: 100%;*/
+}
+.guessinghistory {
+    border-radius: 6px;
+    margin:.3rem .2rem .4rem .2rem;
+    background: rgba(0,95,182,0.8);
+}
+.guessinghistory li{
+    height: 1.2rem;
+    padding: 0 .2rem;
+}
+.guessinghistory li:nth-child(even){
+    background: rgba(255,255,255,0.1); 
+}
+.national {
+    margin-right: .4rem;
+}
+.national-flag {
+    width: .48rem;
+    height: .48rem;
+    background-size: 100% 100%;
+    border-radius:50%;
+    border: 1px solid #fff;
+}
+.guessingRankings {
+    height: 1.6rem;
+    display: block;
+    background:url(../image/guessingRankings.png) no-repeat;
+    background-size:100% 100%; 
+    margin: .3rem .2rem 0 .2rem; 
+}
+.eventRecord {
+    display: block;
+    width: 4.6rem;
+    height: 1.84rem;
+    margin: 0 auto;    
+    background:url(../image/eventRecord.png) no-repeat;
+    background-size:100% 100%;   
+}
+
+.eventRecordList {
+    border-radius: 6px;
+    margin:0 .2rem .4rem .2rem;
+}
+.eventRecordList li{
+    height: 2.2rem;
+    padding: 0 .2rem;
+    background-image: linear-gradient(-180deg, #005FB6 1%, #1085FF 100%);
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    margin-bottom: .2rem; 
+    background: rgba(0,95,182,0.8);   
+}
+.finished {
+    width: .96rem;
+    height: .4rem;
+    background: #ACACAC;
+    border-radius: 2px;
+    text-align: center;
+}
+.solid {
+    width: 100%;
+    border: 1px dashed rgba(255,255,255,0.40);
+    margin: .2rem 0 .4rem 0;
+}
+.solid2 {
+    height: .72rem;
+    border: 1px solid rgba(255,255,255,0.40);
+}
+.ml1 {
+    margin-left: .1rem;
+}
+
+/* 玩法说明 */
+.explain {
+    color: #fff;
+    border-radius: 6px;
+    margin:.3rem .2rem .4rem .2rem;
+    background-image: linear-gradient(-180deg, #005FB6 1%, #1085FF 100%);
+    opacity: 0.8;
+    padding: .2rem;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.50);
+}
+.explain div {
+    color: #FFCC1B;
+    font-size: .30rem;
+    margin:.1rem 0 .2rem 0;
+}
+.explain p {
+    font-size: .24rem;
+    margin-bottom: .4rem;
+    text-align:justify;
+    text-justify:inter-ideograph;
+}
+
+.nothing{
+    position: relative;
+    text-align: center;
+    top: 35%;
+    font-size: 0.5rem;
+}
+.data-show{
+    display: none;
+}
+.no-data {
+    height: 7.2rem;
+    margin: 0 .2rem;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    margin-bottom: .2rem;
+    background: rgba(0,95,182,0.8);
+}
+.no-data i {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background:url(../image/no-data.png) no-repeat;
+    background-size:100% 100%;
+}
+.no-data span {
+    color: #95C5E2;
+    font-size: .3rem;
+    margin-top: .16rem;
+}

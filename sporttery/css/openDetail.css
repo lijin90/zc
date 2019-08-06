@@ -1,0 +1,130 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #EEEEEE;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#openDetail .time{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 1px 5px #ccc;
+}
+#openDetail .time li{
+    float: left;
+    width: 14.2%;
+    text-align: center;
+    padding: 10px 0px;
+}
+#openDetail .time li.active{
+    color:#E68300;
+}
+.nothing{
+    text-align: center;
+    margin: 1rem auto 0rem;
+    color:#E68300;
+}
+.loading{
+    position: absolute;
+    left: 42%;
+    top: 40%;
+}
+#openDetail{
+    display: none;
+}
+#openDetail .title {
+    background: #1E8CFF;
+    padding: 0.2rem 0.2rem;
+}
+
+#openDetail .title p {
+    text-align: center;
+    width: 90%;
+    line-height: 0.5rem;
+    font-size: 0.42rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#openDetail .title .img {
+    width: 8%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+}
+
+
+#openDetail .biaoti {
+    padding: 0.2rem 2%;
+    background: #EEEEEE;
+    color:#9D9D9D;
+}
+
+#openDetail .biaoti span {
+    font-size: 0.3rem;
+    width: 33.33%;
+    float: left;
+}
+#openDetail .datalist{
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    background: #fff;
+}
+#openDetail .datalist .team {
+    padding: 0.2rem 0.2rem;
+    color: #666666;
+}
+#openDetail .datalist .team .league{
+    width: 35%;
+    line-height: 0.4rem;
+}
+#openDetail .datalist .team .teamName{
+    width: 60%;
+    line-height: 0.4rem;
+
+}
+#openDetail .datalist .team .teamName span{
+    float: left;
+    text-align: center;
+    width: 33.33%;
+}
+#openDetail .datalist .team .league span {
+    display: inline-block;
+    /*padding: 0rem 0.4rem;*/
+    /*background: #002E73;*/
+    text-align: center;
+    width: 1.2rem;
+    color: #fff;
+    font-size: 0.3rem;
+    margin: 0rem 0.1rem 0rem 0rem;
+}
+#openDetail .datalist .team .league i{
+    color:#B8B8B8;
+}
+#openDetail .datalist .team table{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #218DFF;
+}
+#openDetail .datalist .team table tr th{
+    padding: 0.2rem 0rem;
+    border-right:1px solid #218DFF;
+}
+#openDetail .datalist .team table tr td{
+    padding: 0.2rem 0rem;
+    border: 1px solid #218DFF;
+    border-right:1px solid #218DFF;
+}
+#openDetail .datalist .team table tr td p {
+    color: #FE5960;
+    margin-bottom: 0.1rem;
+}

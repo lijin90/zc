@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="和讯猜球"/>
+    <title>和讯猜球</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/flexible.min.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="index" v-cloak>
+    <header class="header">
+        <div class="header-content">
+            <div flex="main:justify" class="header-title">
+                <div flex="main:center cross:center" id="explain">玩法说明</div>
+                <div flex="main:center cross:center" id="guessingHistory">竞猜历史</div>
+            </div>
+            <div class="recommend"></div>
+            <div class="recommend-content" v-if="hotGues.length!=0" @click="turnToDetail(hotGues.disc_id)">
+                <i class="recommend-icon"></i>
+                <div flex="dir:left main:justify" class="team-main">
+                    <div flex="dir:top cross:center">
+                        <div flex="main:center cross:center" class="team-icon">
+                            <img v-if="hotGues.a_icon.length!=0" :src="hotGues.a_icon" alt="">
+                            <img v-else src="image/defult.png" alt="">
+                        </div>
+                        <div flex="main:center cross:center" class="team-name">{{hotGues.team_a}}</div>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <span class="fz24">{{hotGues.lea_name}}</span>
+                        <div class="vs">vs</div>
+                        <div flex="main:center cross:center" class="deadline">{{hotGues.m_d}} {{hotGues.h_m}} 截止</div>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <div flex="main:center cross:center" class="team-icon">
+                            <img v-if="hotGues.b_icon.length!=0" :src="hotGues.b_icon" alt="">
+                            <img v-else src="image/defult.png" alt="">
+                        </div>
+                        <div flex="main:center cross:center" class="team-name">{{hotGues.team_b}}</div>
+                    </div>
+                </div>
+                <i class="solid"></i>
+                <div flex="dir:top main:justify" class="popularity-main">
+                    <div flex="dir:left main:justify" class="team-popularity">
+                        <span>{{hotGues.team_a}} 胜</span>
+                        <span>平局</span>
+                        <span>{{hotGues.team_b}} 胜</span>
+                    </div>
+                    <div flex="dir:left" class="popularity">
+                        <div class="part-one" :dataValue="hotGues.win"></div>
+                        <div class="part-two" :dataValue="hotGues.duece"></div>
+                        <div class="part-three" :dataValue="hotGues.lose"></div>
+                    </div>
+                    <div flex="dir:left main:justify" class="team-popularity-info">
+                        <span>{{hotGues.win}}%人支持</span>
+                        <span>{{hotGues.duece}}%人支持</span>
+                        <span>{{hotGues.lose}}%人支持</span>
+                    </div>
+                </div>
+            </div>
+            <div class="no_data" v-else ref="dataShow">
+                <div class="recommend-content" flex="dir:top cross:center main:center">
+                    <i></i>
+                    <span>暂无赛事记录</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div flex="main:justify" class="type-main">
+            <i class="all1 all2" data-index="1" @click="getIndexData(0)"></i>
+            <i class="world-cup2" data-index="2" @click="getIndexData(10)"></i>
+            <i class="league2" data-index="3" @click="getIndexData(1)"></i>
+        </div>
+        <div flex="main:justify" class="lqj">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!--<div class="swiper-slide">-->
+                        <!--<a href="register.html">-->
+                            <!--<img src="image/banner1.png" alt="">-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <div class="swiper-slide">
+                        <a href="register.html">
+                            <img src="image/banner2.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="common">
+            <div class="item-list" id="h0">
+                <ul class="event-list" v-if="indexList.length!=0" v-for="indexItem in indexList">
+                    <li flex="cross:center main:justify">
+                        <span class="info-title">{{indexItem.day}} {{indexItem.week}}  {{indexItem.count}}场比赛</span>
+                        <i class="switch-icon" data-index="1" @click="hideMore"></i>
+                    </li>
+                    <li flex="dir:left" class="h100 item" v-for="innerItem in indexItem.item"
+                        @click="turnToDetail(innerItem.disc_id)">
+                        <div flex="dir:top main:center" class="pk-info">
+                            <span>{{innerItem.lea_name}}</span>
+                            <span>{{innerItem.h_m}}截止</span>
+                            <div flex="dir:left" class="mt1">
+                                <div flex="dir:top">
+                                    <img class="national-flag" :src="innerItem.a_icon" alt="">
+                                    <span class="country">{{innerItem.team_a|substr}}</span>
+                                </div>
+                                <span class="vs2">vs</span>
+                                <div flex="dir:top">
+                                    <img class="national-flag" :src="innerItem.b_icon" alt="">
+                                    <span class="country">{{innerItem.team_b|substr}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div flex="cross:center main:center" style="width: 80%">
+                            <div flex="dir:top main:justify" class="popularity-main2">
+                                <div flex="dir:left main:justify" class="team-popularity">
+                                    <span>{{innerItem.team_a}} 胜</span>
+                                    <span>平局</span>
+                                    <span>{{innerItem.team_b}} 胜</span>
+                                </div>
+                                <div flex="dir:left" class="popularity">
+                                    <div class="part-one" :dataValue="innerItem.win"></div>
+                                    <div class="part-two" :dataValue="innerItem.duece"></div>
+                                    <div class="part-three" :dataValue="innerItem.lose"></div>
+                                </div>
+                                <div flex="dir:left main:justify" class="team-popularity-info">
+                                    <span>{{innerItem.win}}%人支持</span>
+                                    <span>{{innerItem.duece}}%人支持</span>
+                                    <span>{{innerItem.lose}}%人支持</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="event-list no-data" flex="dir:top cross:center main:center" v-else>
+                    <i></i>
+                    <span>暂无赛事记录</span>
+                </ul>
+            </div>
+            <div class="item-list" id="h1">
+                <ul class="event-list" v-if="indexList.length!=0" v-for="indexItem in indexList">
+                    <li flex="cross:center main:justify">
+                        <span class="info-title">{{indexItem.day}} {{indexItem.week}}  {{indexItem.count}}场比赛</span>
+                        <i class="switch-icon" data-index="1" @click="hideMore"></i>
+                    </li>
+                    <li flex="dir:left" class="h100 item1" v-for="innerItem in indexItem.item"
+                        @click="turnToDetail(innerItem.disc_id)">
+                        <div flex="dir:top main:center" class="pk-info">
+                            <span>{{innerItem.lea_name}}</span>
+                            <span>{{innerItem.h_m}}截止</span>
+                            <div flex="dir:left" class="mt1">
+                                <div flex="dir:top">
+                                    <img class="national-flag" :src="innerItem.a_icon" alt="">
+                                    <span class="country">{{innerItem.team_a|substr}}</span>
+                                </div>
+                                <span class="vs2">vs</span>
+                                <div flex="dir:top">
+                                    <img class="national-flag" :src="innerItem.b_icon" alt="">
+                                    <span class="country">{{innerItem.team_b|substr}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div flex="cross:center main:center" style="width: 80%">
+                            <div flex="dir:top main:justify" class="popularity-main2">
+                                <div flex="dir:left main:justify" class="team-popularity">
+                                    <span>{{innerItem.team_a}} 胜</span>
+                                    <span>平局</span>
+                                    <span>{{innerItem.team_b}} 胜</span>
+                                </div>
+                                <div flex="dir:left" class="popularity">
+                                    <div class="part-one" :dataValue="innerItem.win"></div>
+                                    <div class="part-two" :dataValue="innerItem.duece"></div>
+                                    <div class="part-three" :dataValue="innerItem.lose"></div>
+                                </div>
+                                <div flex="dir:left main:justify" class="team-popularity-info">
+                                    <span>{{innerItem.win}}%人支持</span>
+                                    <span>{{innerItem.duece}}%人支持</span>
+                                    <span>{{innerItem.lose}}%人支持</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="event-list no-data" flex="dir:top cross:center main:center" v-else>
+                    <i></i>
+                    <span>暂无赛事记录</span>
+                </ul>
+            </div>
+            <div class="item-list" id="h2">
+                <div v-if="indexList.length!=0">
+                    <ul class="event-list" v-for="indexItem in indexList">
+                        <li flex="cross:center main:justify">
+                            <span class="info-title">{{indexItem.day}} {{indexItem.week}}  {{indexItem.count}}场比赛</span>
+                            <i class="switch-icon" data-index="1" @click="hideMore"></i>
+                        </li>
+                        <li flex="dir:left" class="h100 item" v-for="innerItem in indexItem.item"
+                            @click="turnToDetail(innerItem.disc_id)">
+                            <div flex="dir:top main:center" class="pk-info">
+                                <span>{{innerItem.lea_name}}</span>
+                                <span>{{innerItem.h_m}}截止</span>
+                                <div flex="dir:left" class="mt1">
+                                    <div flex="dir:top">
+                                        <img class="national-flag" :src="innerItem.a_icon" alt="">
+                                        <span class="country">{{innerItem.team_a|substr}}</span>
+                                    </div>
+                                    <span class="vs2">vs</span>
+                                    <div flex="dir:top">
+                                        <img class="national-flag" :src="innerItem.b_icon" alt="">
+                                        <span class="country">{{innerItem.team_b|substr}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div flex="cross:center main:center" style="width: 80%">
+                                <div flex="dir:top main:justify" class="popularity-main2">
+                                    <div flex="dir:left main:justify" class="team-popularity">
+                                        <span>{{innerItem.team_a}} 胜</span>
+                                        <span>平局</span>
+                                        <span>{{innerItem.team_b}} 胜</span>
+                                    </div>
+                                    <div flex="dir:left" class="popularity">
+                                        <div class="part-one" :dataValue="innerItem.win"></div>
+                                        <div class="part-two" :dataValue="innerItem.duece"></div>
+                                        <div class="part-three" :dataValue="innerItem.lose"></div>
+                                    </div>
+                                    <div flex="dir:left main:justify" class="team-popularity-info">
+                                        <span>{{innerItem.win}}%人支持</span>
+                                        <span>{{innerItem.duece}}%人支持</span>
+                                        <span>{{innerItem.lose}}%人支持</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div v-else>
+                    <ul class="event-list no-data" flex="dir:top cross:center main:center">
+                        <i></i>
+                        <span>暂无赛事记录</span>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <i class="ranking-tip" id="guessingRankdetail"></i>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/index.js"></script>
+</html>

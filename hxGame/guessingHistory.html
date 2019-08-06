@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="和讯猜球"/>
+    <title>竞猜历史</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/guessingHistory.css">
+    <script src="js/flexible.min.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="history" v-cloak>
+    <div class="content">
+        <div v-if="historyList.length!=0">
+            <ul class="guessinghistory">
+                <li flex="dir:left cross:center" v-for="item in historyList" @click="turnTODetail(item.gues_id)">
+                    <div flex="dir:left" flex-box="1">
+                        <div flex="dir:left cross:center" class="national">
+                            <img class="national-flag" v-if="item.a_icon.length!=0" :src="item.a_icon" alt="">
+                            <img class="national-flag" v-else src="image/defult.png" alt="">
+                            <img class="national-flag ml-1" v-if="item.b_icon.length!=0" :src="item.b_icon" alt="">
+                            <img class="national-flag" v-else src="image/defult.png" alt="">
+                        </div>
+                        <div flex="dir:top">
+                            <span class="fz28">{{item.team_a}} VS {{item.team_b}}</span>
+                            <span class="fz24">{{item.m_d}} {{item.h_m}}</span>
+                        </div>
+                    </div>
+                    <div flex="dir:top" flex-box="0">
+                        <span class="fz32 tar highlight" v-if="item.status_id != 4 || item.gues_result_id == ''">待开奖</span>
+                        <span class="fz32 tar highlight"
+                              v-else-if="item.status_id == 4 && item.current_result_id == item.gues_result_id">返{{item.returnAmount}}金币</span>
+                        <span class="fz32" v-else>未中奖</span>
+                        <span class="fz24 tar">投注{{item.bets_amount}}金币</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div v-else class="data-show">
+            <div flex="dir:top cross:center main:center" class="no-data" style="margin-top: 0.4rem">
+                <i></i>
+                <span>暂无赛事记录</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(".guessinghistory").on("click", "li", function () {
+        window.location.href = "./guessingDetails.html"
+    })
+</script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/guessingHistory.js"></script>
+</html>

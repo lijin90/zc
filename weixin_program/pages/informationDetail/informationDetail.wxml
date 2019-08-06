@@ -1,0 +1,9 @@
+<view>
+  <view class="flex-column title">
+    <view>{{datalist.news_title}}</view>
+    <text>{{datalist.editor_create}} {{datalist.news_provenance}}</text>
+  </view>
+  <view class='con'>
+    <text>{{datalist.news_detail}}</text>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/score/score",
+    "pages/register/register",
+    "pages/my/my",
+    "pages/scoreDetail/scoreDetail",
+    "pages/race/race",
+    "pages/friend/friend",
+    "pages/expert/expert",
+    "pages/information/information",
+    "pages/jnlist/jnlist",
+    "pages/pay/pay",
+    "pages/logs/logs",
+    "pages/informationDetail/informationDetail",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "量球匠",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#BBBBBB",
+    "selectedColor": "#419BFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/zixun_active.png",
+        "iconPath": "images/zixun.png",
+        "pagePath": "pages/information/information",
+        "text": "资讯列表"
+      },
+      {
+        "selectedIconPath": "images/bifen_active.png",
+        "iconPath": "images/bifen.png",
+        "pagePath": "pages/score/score",
+        "text": "比分"
+      },
+      {
+        "selectedIconPath": "images/zu_active.png",
+        "iconPath": "images/zu.png",
+        "pagePath": "pages/race/race",
+        "text": "开奖公告"
+      },
+      {
+        "selectedIconPath": "images/my_active.png",
+        "iconPath": "images/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

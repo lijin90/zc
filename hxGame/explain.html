@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="和讯猜球"/>
+    <title>玩法说明</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/guessingHistory.css">
+    <script src="js/flexible.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="explain">
+        <div>胜平负玩法</div>
+        <p>玩家可以在90分钟内针对单场比赛进行投注，主队胜、主队负、双方打平三个选项对应不同赔率；当双方对阵双方实力相差较大时，可能推出让球选项。</p>
+        <!--<div>实时竞猜玩法</div>-->
+        <!--<p>玩家可以在90分钟内的不同时段对单场比赛进行投注，例如：10~19分钟、20~29分钟、以此类推，按照不同时段分别对比赛双方的队伍进行实时进球预测；对应竞猜时间过后出现封盘情况，此时不可对此选项竞猜。</p>-->
+        <div>结算</div>
+        <p>投注完成后，用户可在竞猜历史中查看投注记录，当赛事结束后，如果用户竞猜正确，系统会根据用户竞猜时的赔率返还用户相应的金币。</p>
+        <div>奖励</div>
+        <p>世界杯期间一共64场比赛，针对每场比赛会推出对应的榜单，榜单按照用户单场比赛盈利金额数量进行排名，每场获得第一名的用户将直接获得10000牛币，牛币可以在股神争霸锦标赛中使用，以此赚取现金奖励。</p>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(".guessinghistory").on("click", "li", function () {
+        window.location.href = "./guessingDetails.html"
+    })
+</script>
+</html>

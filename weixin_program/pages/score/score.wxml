@@ -1,0 +1,38 @@
+<view class="container">
+  <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+    <block wx:for="{{headList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx">
+      <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" data-leagueid='{{item.leagueId}}' bindtap="switchNav">{{item.leagueName}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view scroll-y="true" class="scoll-h" style='opacity:{{opacity}}' animation="{{animationData}}"  scroll-top='{{scrollTop}}' bindscrolltolower='lower' bindscrolltoupper='up'>
+    <block>
+      <view wx:for="{{datalist}}" wx:for-item="item" wx:for-index="index">
+        <view class='time'>{{item.name}}</view>
+        <view class="bifen_list flex-row" wx:for="{{item.item}}" wx:for-item="items" data-season_id="{{items.season_id}}" data-teama="{{items.team_a}}" bindtap='analyze'>
+          <!-- <view class='every_time'>{{items.play_time}}</view> -->
+          <view class="team flex-column" data-season_id='{{items.season_id}}'>
+            <image wx-if="{{items.a_icon.length!=0}}" src="{{items.a_icon}}"></image>
+            <image wx:else src="../../images/default1.png"></image>
+            <text>{{items.team_a}}</text>
+          </view>
+          <view class="team flex-column lun_time">
+            <text class="qufen">{{items.play_time}} {{items.lea_name}} 第{{items.gameweek}}轮</text>
+            <text class="score" wx:if='{{items.status_id==4}}'>{{items.source_a}}-{{items.source_b}}</text>
+            <text wx:else>数据待更新</text>
+            <text class="qufen" wx:if='{{items.status_id==4}}'>{{items.status_name}}</text>
+            <!-- <text class="qufen" wx:else>未开赛</text> -->
+          </view>
+          <view class="team flex-column">
+            <image wx-if="{{items.b_icon.length!=0}}" src="{{items.b_icon}}"></image>
+            <image wx:else src="../../images/default1.png"></image>
+            <text>{{items.team_b}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="flex-column nothing" hidden="{{show}}">
+        <image src="../../images/nothing.png"></image>
+        <text>暂无数据</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

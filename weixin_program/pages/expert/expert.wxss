@@ -1,0 +1,35 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  /* margin: 0px 0px 6px 0px; */
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.list_expert{
+  padding: 10px 0px 10px 0px;
+  border-bottom: 0.1px solid #eee;
+}
+.expert{
+  padding: 0px 10px;
+}
+.expert image{
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+.expert_image text{
+  font-size: 14px;
+  color: #323232;
+}
+.introduce{
+  font-size: 14px;
+  color: #9b9b9b;
+  padding: 5px 0px;
+}

@@ -1,0 +1,304 @@
+body{
+    background: url("../image/background.jpg") repeat-y;
+    background-size: 100%;
+}
+.container {
+    color: #FFFFFF;
+}
+.header {
+    width:100%; 
+    height:5.4rem; 
+    background:url(../image/header.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.hide,#h1,#h2 {
+    display: none;
+}
+.header-content {
+    padding: 0 .2rem;
+}
+.header-title {
+    padding-top: .2rem;
+}
+.team-main {
+    padding: .4rem .2rem 0 .4rem;
+}
+.h100 {
+    height: 100%;
+}
+.header-title div {
+    width: 1.6rem;
+    height: .48rem;
+    background: rgba(0,0,0,1);
+    border-radius: 100px;
+    font-size: .24rem;
+}
+.recommend {
+    height: 4.2rem;
+    margin-top: .2rem;
+    background-image: linear-gradient(-180deg, #005FB6 1%, #10A7FF 100%);
+    box-shadow: 2px 3px 8px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    opacity: 0.6;
+}
+.recommend-content {
+    width: 100%;
+    height: 4.2rem;
+    border-radius: 6px;
+    position: relative;
+    top: -4.2rem;
+    overflow: hidden;
+}
+.recommend-icon {
+    display: block;
+    width:.96rem;
+    height:.96rem; 
+    background:url(../image/recommend.png) no-repeat;
+    background-size:100% 100%;
+    position: absolute; 
+}
+.team-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.team-icon img {
+    width: 1.2rem;
+    height: 1.2rem; 
+    border-radius: 50% ;
+}
+.team-name {
+    width: 1.4rem;
+    height: .48rem;
+    background: #5C9946;
+    border-radius: 100px;
+    font-size: .24rem;
+    margin-top: .16rem;
+}
+.fz24 {
+    font-size: .24rem;
+}
+.vs {
+    font-family: ArialNarrow-BoldItalic;
+    font-size: .96rem;
+    line-height: .96rem;
+}
+.vs2 {
+    font-size: .32rem; 
+    margin: 0 .1rem;
+}
+.deadline {
+    width: 2.6rem;
+    height: .48rem;
+    background: rgba(0,0,0,0.8);
+    border-radius: 100px;
+    font-size: .24rem;
+    margin-top: .2rem;
+}
+.solid {
+    width: 100%;
+    display: block;
+    border: 1px solid rgba(255,255,255,0.30);
+    margin: .24rem 0;
+}
+.popularity-main {
+    padding: 0 .3rem;
+    font-size: .24rem;
+}
+.popularity-main2 {
+    width: 90%;
+    font-size: .24rem;
+}
+.team-popularity {
+    color: #FFCC1B;
+}
+.team-popularity-info {
+    opacity: 0.7;
+    font-size: .24rem;
+}
+.popularity {
+    border-radius: 10px;
+    margin: .12rem 0;
+    overflow: hidden;
+}
+.popularity2 {
+    border-radius: 3px;
+    margin: .2rem 0;
+    overflow: hidden;
+}
+.part-one {
+    width: 64%;
+    height: .1rem;
+    background: #E33856;
+}
+.part-two {
+    width: 12%;
+    height: .1rem;
+    background: #F8A142;
+}
+.part-three {
+    width: 34%;
+    height: .1rem;
+    background: #568EF7;
+}
+.content {
+    width:100%; 
+    background: url("../image/balckshadow.png") no-repeat;
+    background-size: 100%;
+}
+.message {
+    color: #FFCC1B;
+    height: .6rem;
+    font-size: .24rem;
+    background: rgba(0,0,0,0.20);
+}
+.message i {
+    display: block;
+    width: .4rem;
+    height: .36rem;
+    background:url(../image/msg.png) no-repeat;
+    background-size:100% 100%;
+    margin: 0 .2rem;
+}
+.type-main {
+    /*margin-top: .5rem;*/
+    margin-bottom: .2rem;
+}
+.type-main i{
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem; 
+}
+.all2 {
+    background:url(../image/all-2.png) no-repeat;
+    background-size:100% 100%;   
+}
+.all1 {
+    background:url(../image/all-1.png) no-repeat;
+    background-size:100% 100%;   
+}
+.world-cup2 {
+    background:url(../image/world-cup-2.png) no-repeat;
+    background-size:100% 100%;   
+}
+.world-cup1 {
+    background:url(../image/world-cup-1.png) no-repeat;
+    background-size:100% 100%;   
+}
+.league2 {
+    background:url(../image/league-2.png) no-repeat;
+    background-size:100% 100%;   
+}
+.league1 {
+    background:url(../image/league-1.png) no-repeat;
+    background-size:100% 100%;   
+}
+
+.info-title {
+    margin-left: .3rem; 
+}
+.switch-icon {
+    display: block;
+    width: .4rem;
+    height: .4rem; 
+    background:url(../image/lower.png) no-repeat;
+    background-size:100% 100%;
+    margin-right: .3rem;       
+}
+.upper {
+    transform: rotate(-180deg);
+    transition: all .2s ease-in .1s;
+}
+.lower {
+    transform: rotate(0deg);
+    transition: all .2s ease-in .1s;
+}
+.event-list {
+    margin: 0 .2rem;
+    border-radius: 6px;
+    background: rgba(0,95,182,0.8);
+    margin-bottom: .2rem;
+}
+.event-list li{
+    height: 2rem;
+}
+.event-list li:first-child {
+    height: .72rem;
+    font-size: .32rem;
+    border-bottom: 1px solid rgba(255,255,255,0.30);
+    border-radius: 6px 6px 0 0;
+    background: rgba(0, 124, 182, 0.8) !important;
+    /* background-image: linear-gradient(-180deg, #005FB6 1%, #1085FF 100%);
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    background: rgba(16,133,255,0.8) */
+}
+
+.event-list li:nth-child(odd){
+    background: rgba(255,255,255,0.1); 
+    
+} 
+.pk-info {
+    width: 2rem;
+    font-size: .24rem;
+    margin-left: .3rem;
+    border-right: 1px solid rgba(255,255,255,0.30);
+}
+.national-flag {
+    width: .48rem;
+    height: .48rem;
+    background-size:100% 100%; 
+}
+.mt1 {
+    margin-top: .1rem;
+}
+.country {
+    opacity: 0.7;
+    margin-top: .06rem;
+}
+.mb2 {
+    margin-bottom: .2rem;
+}
+.ranking-tip {
+    position: fixed;
+    display: block;
+    width: .4rem;
+    height: 1.6rem; 
+    background:url(../image/ranking-tip.png) no-repeat;
+    background-size:100% 100%;
+    top: 50%;
+    right: 0;
+    z-index: 999;
+    transform: translateY(-50%)
+}
+.lqj{
+    padding: 0.2rem 0.2rem;
+}
+.lqj img{
+    border-radius: 6px;
+}
+.no-data {
+    height: 7.2rem;
+    margin: 0 .2rem;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    margin-bottom: .2rem;
+    background: rgba(0,95,182,0.8);
+}
+.no-data i,.no_data i {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background:url(../image/no-data.png) no-repeat;
+    background-size:100% 100%;
+}
+.no_data{
+    display: none;
+}
+.no-data span,.no_data span{
+    color: #95C5E2;
+    font-size: .3rem;
+    margin-top: .16rem;
+}

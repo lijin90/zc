@@ -1,0 +1,107 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#lottery .title {
+    background: #1E8CFF;
+    padding: 0.2rem 0.2rem;
+    position: relative;
+}
+
+#lottery .title p {
+    text-align: center;
+    width: 80%;
+    line-height: 0.5rem;
+    font-size: 0.36rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#lottery .title .img {
+    width: 8%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+}
+
+#lottery .title .img img {
+    width: 40%;
+    /*vertical-align: middle;*/
+}
+#lottery ul.status li{
+    float: left;
+    width: 33.33%;
+    padding: 0.25rem 0rem;
+    text-align: center;
+    background: #99CBFE;
+    color: #fff;
+    font-size: 0.3rem;
+    letter-spacing: 1px;
+}
+#lottery ul.status li.active{
+    background: #92B7E9;
+}
+#lottery .datalist{
+    padding: 0rem 0.2rem;
+    font-size: 0.26rem;
+}
+#lottery .datalist .con{
+    border-bottom: 1px solid #E4E4E4;
+    padding: 0.25rem 0rem;
+    background: url(../images/arrow_icon.png) 100% center no-repeat;
+}
+#lottery .datalist .con img{
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0rem 0.1rem 0rem 0rem;
+}
+#lottery .datalist .con h2{
+    font-size: 0.3rem;
+    margin: 0rem 0rem 0.2rem;
+}
+#lottery .datalist .con .time{
+    height: 0.8rem;
+    width: 42%;
+    /*line-height: 0.8rem;*/
+}
+#lottery .datalist .con .team{
+    width:52%;
+}
+#lottery .datalist .con .time h2{
+    color:#FF1F1F;
+    /*font-size: 0.32rem;*/
+}
+#lottery .datalist .con .time{
+    text-align: right;
+}
+#lottery .datalist .con  p,#lottery .datalist .con h2.losing{
+    color: #A7A7A7;
+}
+#lottery .datalist .con h2.wait{
+    color: #3397FF;
+}
+#lottery .nothing{
+    text-align: center;
+    color: #A7A7A7;
+    padding: 0.2rem 0rem;
+    font-size: 0.26rem;
+    letter-spacing: 1px;
+}
+/*#lottery .tab{*/
+    /*display: none;*/
+/*}*/
+/*#lottery .show{*/
+    /*display: block;*/
+/*}*/

@@ -1,0 +1,169 @@
+body{
+    background: url("../image/background.jpg") repeat-y;
+    background-size: 100%;
+}
+.container {
+    color: #FFFFFF;
+}
+.finished {
+    width: 1.2rem;
+    height: .4rem;
+    background: #ACACAC;
+    border-radius: 2px;
+    text-align: center;
+}
+.header {
+    width:100%; 
+    height:4.8rem; 
+    background:url(../image/header.jpg) no-repeat;
+    background-size:100% 100%;
+}
+.fz24 {
+    font-size: .24rem;
+}
+.hide {
+    display: none;
+}
+.header-content {
+    padding: 0 .2rem;
+}
+.header-title {
+    padding-top: .2rem;
+}
+.team-main {
+    padding: .2rem .2rem 0 .4rem;
+}
+.h100 {
+    height: 100%;
+}
+.header-title div {
+    width: 1.6rem;
+    height: .48rem;
+    background: rgba(0,0,0,1);
+    border-radius: 100px;
+    font-size: .24rem;
+}
+.recommend-content {
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.team-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+}
+.team-icon img {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+.team-name {
+    width: 1.4rem;
+    height: .48rem;
+    background: #5C9946;
+    border-radius: 100px;
+    font-size: .24rem;
+    margin-top: .16rem;
+}
+.vs {
+    font-family: ArialNarrow-BoldItalic;
+    font-size: .96rem;
+    line-height: .96rem;
+}
+.vs2 {
+    font-size: .32rem; 
+    margin: 0 .1rem;
+}
+.deadline {
+    width: 2.6rem;
+    height: .48rem;
+    background: rgba(0,0,0,0.8);
+    border-radius: 100px;
+    font-size: .24rem;
+    margin-top: .2rem;
+}
+.content {
+    width:100%; 
+    background: url("../image/balckshadow.png") no-repeat;
+    background-size: 100%;
+}
+.mt1 {
+    margin-top: .1rem;
+}
+.mt6 {
+    margin-top: .6rem;
+}
+.mt04 {
+    margin-top: .04rem;
+}
+.mt4 {
+    margin-top: .4rem;
+}
+.country {
+    opacity: 0.7;
+    margin-top: .06rem;
+}
+.mb2 {
+    margin-bottom: .2rem;
+}
+.my-record {
+    height: 1.6rem;
+    background-image: linear-gradient(-180deg, #005FB6 2%, #10A7FF 100%);
+    box-shadow: 2px 3px 8px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    margin: -1rem .2rem 0 .2rem;
+}
+.record-main {
+    line-height: 1.6rem;
+    margin: 0 .2rem;
+}
+.record-main2 {
+    line-height: 1.28rem;
+    margin: 0 .2rem;
+}
+.ranking {
+    width: .5rem;
+    margin-left: .2rem;
+}
+.photo {
+    width: .72rem;
+    height:.72rem;
+    margin-right: .2rem;
+}
+.top {
+    width: .5rem;
+    height:.5rem; 
+    margin-right: .2rem; 
+}
+.gold-icon {
+    width: .48rem;
+    height: .48rem;
+    background-image: url(../image/gold-icon.png);
+    background-size: 100% 100%;
+    display:block;
+    margin-right: .1rem;
+}
+.gold-info {
+    width: 1.8rem;
+    height: .48rem;    
+    background: rgba(22,60,95,0.90);
+    border-radius: 100px;
+}
+.tipTtitle {
+    text-align: right;
+    padding: .2rem;
+}
+.rank {
+    border-radius: 6px;
+    background: rgba(0,95,182,0.8);
+    margin: .2rem;    
+}
+.rank li {
+    height: 1.28rem;
+}
+.rank li:nth-child(even) {
+    background: rgba(255,255,255,0.1);
+}

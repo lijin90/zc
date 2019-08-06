@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="list_item" wx:for="{{datalist}}" wx:for-item="item" wx:for-index="index">
+    <view class="ai" wx:for="{{item.item}}" wx:for-item="items" bindtap="tapName" data-esoterica_id="{{item.esoterica_id}}">
+      <view class="section ai_logo">
+        <view class="flex-wrp" style="flex-direction:row;justify-content: space-between;">
+          <view class="ai_logo" style="flex-direction:row;justify-content: flex-start;">
+            <image src="{{item.head_img_url}}"></image>
+            <view class="ai_name flex-wrp" style="flex-direction:column">
+              <text class="AIName">{{item.nickname}}</text>
+              <view>
+                <text style="font-size:12px;">人工智能专家</text>
+              </view>
+            </view>
+          </view>
+          <view style="margin-top:15px">
+            <text class="star star2" wx:if='{{item.ts_id==1&&items.status_id==1}}'>分析</text>
+            <text class="star star2" wx:elif='{{item.ts_id==1&&items.status_id==2||item.ts_id==1&&items.status_id==3||item.ts_id==1&&items.status_id==7}}'>比赛进行中</text>
+            <text class="star star2" wx:else>已完场</text>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="vs_status distance" wx:if="{{item.ts_id==1&&item.is_pay==0&&items.status_id!=4}}">
+          <text style="color:#FF7C39">{{item.intro}}</text>
+        </view>
+        <view class="number distance">
+          <text class="week">{{items.odds_num}}</text>
+          <text class="league">{{items.n}}</text>
+        </view>
+        <view class="flex-row distance">
+          <text>{{items.a}}</text>
+          <text>VS</text>
+          <text>{{items.b}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="nothing" wx:if="{{show==true}}">
+    <view>
+      <image src='../../images/nothing.png'></image>
+    </view>
+    <view>暂无数据</view>
+  </view>
+</view>

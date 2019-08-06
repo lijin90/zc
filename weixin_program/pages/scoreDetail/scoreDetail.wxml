@@ -1,0 +1,399 @@
+<view class="shipin">
+  <view class='left_team module'>
+    <image wx:if="{{team.a_icon.length!=0}}" src="{{team.a_icon}}"></image>
+    <image wx:else src="../../images/default1.png"></image>
+    <text style="margin-top:10rpx;">{{team.teamA}}</text>
+  </view>
+  <view class='left_team module'>
+    <text>{{team.leagueName}} {{team.playTime}}</text>
+    <text style="font-size:16px;">{{team.scoreA}} - {{team.scoreB}}</text>
+  </view>
+  <view class='left_team module'>
+    <image wx:if="{{team.b_icon.length!=0}}" src="{{team.b_icon}}"></image>
+    <image wx:else src="../../images/default1.png"></image>
+    <text style="margin-top:10rpx;">{{team.teamB}}</text>
+  </view>
+</view>
+<view>
+  <view class='nva_list'>
+    <view class="saikuang nva_module  {{currentTab==0?'active':''}}" data-current="0" bindtap='tabNva'>赛况</view>
+    <view class="feixin nva_module  {{currentTab==1?'active':''}}" data-current="1" bindtap='tabNva'>分析</view>
+  </view>
+</view>
+<view hidden="{{hiddenSK}}">
+  <view class="status_title">事件</view>
+  <view style='padding:10rpx 0rpx' wx:if="{{shijian.length>0}}">
+    <view class="begin">
+      <view class='beginImage' style='margin:0rpx 0rpx 10rpx'>
+        <image src="../../images/saikuang/time.png"></image>
+      </view>
+      <view class='dian'></view>
+      <view class='xian'></view>
+    </view>
+    <view>
+      <view class="tx" wx:for="{{shijian}}">
+        <view class="lr">
+          <view class="everyOne" wx:if="{{item.Atype_name=='黄牌'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/yellow.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.Atype_name=='红牌'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/red.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.Atype_name=='入球'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/jin.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.Atype_name=='两黄变红'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/liahuang.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.Atype_name=='点球'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/dian.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.Atype_name=='点球未进'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/dian_wei.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.Atype_name=='乌龙球'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/wu.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+            <view class="everyOne" wx:elif="{{item.Atype_name=='助攻'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/zhu.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.Atype_name=='换人'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/up.png"></image>
+              <text>{{item.Aname_in}}</text>
+            </view>
+            <view class="small_module">
+              <image src="../../images/saikuang/down.png"></image>
+              <text>{{item.Aname_out}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+        </view>
+        <view class="ct">
+          <view class='num'>{{item.start_time}}</view>
+          <view class='xian' style="height:{{dheight}}"></view>
+        </view>
+        <view class="lr rt">
+          <view class="everyOne" wx:if="{{item.type_name=='黄牌'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/yellow.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='红牌'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/red.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='入球'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/jin.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='两黄变红'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/liahuang.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='点球'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/dian.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='点球未进'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/dian_wei.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='乌龙球'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/wu.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='助攻'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/zhu.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+          <view class="everyOne" wx:elif="{{item.type_name=='换人'}}">
+            <view class="small_module">
+              <image src="../../images/saikuang/up.png"></image>
+              <text>{{item.name_in}}</text>
+            </view>
+            <view class="small_module">
+              <image src="../../images/saikuang/down.png"></image>
+              <text>{{item.name_out}}</text>
+            </view>
+            <view class="arrow"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="begin">
+      <view class='xian'></view>
+      <view class='dian'></view>
+      <view class='beginImage' style='margin:10rpx 0rpx 0rpx'>
+        <image src="../../images/saikuang/shaozi.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="nothing" hidden='{{show}}'>
+    <!-- <image src="../../images/nothing.png"></image> -->
+    <text>暂无数据</text>
+  </view>
+  <view class='zc_status'>
+    <view class="zc_module">
+      <view class="center_width">
+        <image src="../../images/saikuang/jin.png"></image>
+        <text>进球</text>
+      </view>
+    </view>
+    <view class="zc_module">
+      <view class="center_width">
+        <image src="../../images/saikuang/dian.png"></image>
+        <text>点球</text>
+      </view>
+    </view>
+    <view class="zc_module">
+      <image src="../../images/saikuang/dian_wei.png"></image>
+      <text>点球未进</text>
+    </view>
+    <view class="zc_module">
+      <view class="center_width">
+        <image src="../../images/saikuang/wu.png"></image>
+        <text>乌龙球</text>
+      </view>
+    </view>
+    <view class="zc_module">
+      <view class="center_width">
+        <image src="../../images/saikuang/zhu.png"></image>
+        <text>助攻</text>
+      </view>
+    </view>
+  </view>
+  <view class="status_title">技术统计</view>
+  <view class='tongji'>
+    <view class="saikuang nva_module">
+      <text>{{team.teamA}}</text>
+      <image wx:if="{{team.a_icon.length!=0}}" src="{{team.a_icon}}"></image>
+      <image wx:else src="../../images/default1.png"></image>
+      <!-- <image src="../../images/default1.png"></image> -->
+    </view>
+    <view class="saikuang nva_module">
+      <image wx:if="{{team.b_icon.length!=0}}" src="{{team.b_icon}}"></image>
+      <image wx:else src="../../images/default1.png"></image>
+      <text>{{team.teamB}}</text>
+    </view>
+  </view>
+  <view class="nothing" hidden='{{showNUM}}'>
+    <!-- <image src="../../images/nothing.png"></image> -->
+    <text>暂无数据</text>
+  </view>
+  <view class="scoreData" wx:for="{{jishu}}">
+    <view class="score_num">{{item.score_a}}</view>
+    <view class="score_progress">
+      <progress percent='{{item.score_a}}' stroke-width="8" />
+    </view>
+    <view class="score_text">{{item.type_name}}</view>
+    <view class="score_progress">
+      <progress percent='{{item.score_b}}' stroke-width="8" />
+    </view>
+    <view class="score_num">{{item.score_b}}</view>
+  </view>
+</view>
+<view class="scoreDetail" hidden="{{hiddenFX}}" style='opacity:0' animation="{{animationData}}">
+  <view class="status_title">盘口指数</view>
+  <view class="status_small_title">亚盘</view>
+  <view class="table-wrapper">
+    <view class='row1'>
+      <text class="text">公司</text>
+      <text class="text">类型</text>
+      <text class="text">主赔</text>
+      <text class="text">让球</text>
+      <text class="text">客赔</text>
+      <text class="text">时间</text>
+    </view>
+    <view class="row1 fontSize" wx:for="{{panKou_yp}}">
+      <text class="text">{{item.type_name}}</text>
+      <view class="common_data flexWidth">
+        <view class="column-data">
+          <text class="text red">即时</text>
+          <text class="text">{{item.lottery_win}}</text>
+          <text class="text">{{item.lottery_deuce}}</text>
+          <text class="text">{{item.lottery_lose}}</text>
+        </view>
+        <view class="column-data">
+          <text class="text">初盘</text>
+          <text class="text">{{item.final_win}}</text>
+          <text class="text">{{item.final_deuce}}</text>
+          <text class="text">{{item.final_lose}}</text>
+        </view>
+      </view>
+      <text class="text change_time">{{item.change_time}}</text>
+    </view>
+    <view class='nothing' hidden="{{hiddenName}}">数据努力更新中</view>
+  </view>
+  <view class="status_small_title">欧赔</view>
+  <view class="table-wrapper">
+    <view class='row1'>
+      <text class="text">公司</text>
+      <text class="text">类型</text>
+      <text class="text">主胜</text>
+      <text class="text">平</text>
+      <text class="text">客胜</text>
+      <text class="text">时间</text>
+    </view>
+    <view class="row1 fontSize" wx:for="{{panKou_op}}">
+      <text class="text">{{item.type_name}}</text>
+      <view class="common_data">
+        <view class="column-data">
+          <text class="text red">即时</text>
+          <text class="text">{{item.lottery_win}}</text>
+          <text class="text">{{item.lottery_deuce}}</text>
+          <text class="text">{{item.lottery_lose}}</text>
+        </view>
+        <view class="column-data">
+          <text class="text">初盘</text>
+          <text class="text">{{item.final_win}}</text>
+          <text class="text">{{item.final_deuce}}</text>
+          <text class="text">{{item.final_lose}}</text>
+        </view>
+      </view>
+      <text class="text change_time">{{item.change_time}}</text>
+    </view>
+    <view class='nothing' hidden="{{hiddenName}}">数据努力更新中</view>
+  </view>
+  <view class="status_title">近期战绩</view>
+  <view class="status_small_title">
+    <image wx:if="{{team.a_icon.length!=0}}" src="{{team.a_icon}}"></image>
+    <image wx:else src="../../images/default1.png"></image>
+    <text>{{team.teamA}}</text>
+  </view>
+  <view class="table-wrapper">
+    <view class='row1'>
+      <text class="text">日期</text>
+      <text class="text">赛事</text>
+      <text class="text">主队</text>
+      <text class="text">比分</text>
+      <text class="text">客队</text>
+    </view>
+    <view class='row1 fontSize' wx:for="{{nearTeamA}}">
+      <text class="text">{{item.play_year}} {{item.play_month}}</text>
+      <text class="text">{{item.lea_name}}</text>
+      <text class="text">{{item.team_a}}</text>
+      <text class="text zicolor">{{item.source_a}}-{{item.source_b}}</text>
+      <text class="text">{{item.team_b}}</text>
+    </view>
+  </view>
+  <view class="status_small_title">
+    <image wx:if="{{team.b_icon.length!=0}}" src="{{team.b_icon}}"></image>
+    <image wx:else src="../../images/default1.png"></image>
+    <text>{{team.teamB}}</text>
+  </view>
+  <view class="table-wrapper">
+    <view class='row1'>
+      <text class="text">日期</text>
+      <text class="text">赛事</text>
+      <text class="text">主队</text>
+      <text class="text">比分</text>
+      <text class="text">客队</text>
+    </view>
+    <view class='row1 fontSize' wx:for="{{nearTeamB}}">
+      <text class="text">{{item.play_year}} {{item.play_month}}</text>
+      <text class="text">{{item.lea_name}}</text>
+      <text class="text">{{item.team_a}}</text>
+      <text class="text zicolor">{{item.source_a}}-{{item.source_b}}</text>
+      <text class="text">{{item.team_b}}</text>
+    </view>
+  </view>
+  <view class="status_title">未来三场</view>
+  <view class="status_small_title">
+    <image wx:if="{{team.a_icon.length!=0}}" src="{{team.a_icon}}"></image>
+    <image wx:else src="../../images/default1.png"></image>
+    <text>{{team.teamA}}</text>
+  </view>
+  <view class="table-wrapper">
+    <view class='row1'>
+      <text class="text">日期</text>
+      <text class="text">赛事</text>
+      <text class="text">主队</text>
+      <text class="text">比分</text>
+      <text class="text">客队</text>
+    </view>
+    <view class='row1 fontSize' wx:for="{{futureThreeA}}">
+      <text class="text">{{item.play_year}} {{item.play_month}}</text>
+      <text class="text">{{item.lea_name}}</text>
+      <text class="text">{{item.team_a}}</text>
+      <text class="text">{{item.source_a}}-{{item.source_b}}  </text>
+      <text class="text">{{item.team_b}}</text>
+    </view>
+  </view>
+  <view class="status_small_title">
+    <image wx:if="{{team.b_icon.length!=0}}" src="{{team.b_icon}}"></image>
+    <image wx:else src="../../images/default1.png"></image>
+    <text>{{team.teamB}}</text>
+  </view>
+  <view class="table-wrapper">
+    <view class='row1'>
+      <text class="text">日期</text>
+      <text class="text">赛事</text>
+      <text class="text">主队</text>
+      <text class="text">比分</text>
+      <text class="text">客队</text>
+    </view>
+    <view class='row1 fontSize' wx:for="{{futureThreeB}}">
+      <text class="text">{{item.play_year}} {{item.play_month}}</text>
+      <text class="text">{{item.lea_name}}</text>
+      <text class="text">{{item.team_a}}</text>
+      <text class="text">{{item.source_a}}-{{item.source_b}}</text>
+      <text class="text">{{item.team_b}}</text>
+    </view>
+  </view>
+</view>

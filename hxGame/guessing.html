@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="和讯猜球"/>
+    <title>和讯猜球</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/guessing.css">
+    <script src="js/flexible.min.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="gues" v-cloak>
+    <header class="header">
+        <div class="header-content">
+            <div flex="dir:right" class="header-title">
+                <div flex="main:center cross:center" id="guessingHistory">竞猜历史</div>
+            </div>
+            <div class="recommend-content">
+                <div flex="dir:left main:justify" v-if="gues.length!=0" class="team-main">
+                    <div flex="dir:top cross:center">
+                        <div flex="main:center cross:center" class="team-icon">
+                            <img v-if="gues.a_icon.length!=0" :src="gues.a_icon" alt="">
+                            <img v-else src="image/defult.png" alt="">
+                        </div>
+                        <div flex="main:center cross:center" class="team-name">{{gues.team_a}}</div>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <span class="fz24">{{gues.lea_name}}</span>
+                        <div class="vs">vs</div>
+                        <div flex="main:center cross:center" class="deadline">{{gues.m_d}} {{gues.h_m}}截止</div>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <div flex="main:center cross:center" class="team-icon">
+                            <img v-if="gues.b_icon.length!=0" :src="gues.b_icon" alt="">
+                            <img v-else src="image/defult.png" alt="">
+                        </div>
+                        <div flex="main:center cross:center" class="team-name">{{gues.team_b}}</div>
+                    </div>
+                </div>
+                <div flex="dir:left main:justify" v-else class="team-main">
+                    暂无对阵数据
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="how-to-play-icon1"></div>
+        <div class="how-to-play1"></div>
+        <div flex="dir:top cross:center" class="how-to-play-content" v-if="gues.WDL=true">
+            <p class="title">本场比赛</p>
+            <div flex="dir:top cross:center">
+                <div flex="dir:left main:justify" v-if="odds.had_win!=undefined">
+                    <div flex="dir:top cross:center">
+                        <div flex="dir:top cross:center" class="item" @click="betsWDL('HDW','1',$event)">
+                            <span class="mt04">{{gues.team_a}} 胜</span>
+                            <span class="fz32">{{odds.had_win}}</span>
+                        </div>
+                        <span class="popularity">{{gues.win}} %人支持</span>
+                    </div>
+                    <div flex="dir:top cross:center" style="margin: 0rem 0.3rem;">
+                        <div flex="dir:top cross:center" class="item" @click="betsWDL('HDD','1',$event)">
+                            <span class="mt04">平</span>
+                            <span class="fz32">{{odds.had_deuce}}</span>
+                        </div>
+                        <span class="popularity">{{gues.duece}}%人支持</span>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <div flex="dir:top cross:center" class="item" @click="betsWDL('HDL','1',$event)">
+                            <span class="mt04">{{gues.team_b}} 胜</span>
+                            <span class="fz32">{{odds.had_lose}}</span>
+                        </div>
+                        <span class="popularity">{{gues.lose}}%人支持</span>
+                    </div>
+                </div>
+                <p class="mt4 title" v-if="odds.hhad_win!=undefined">{{gues.team_a}}让{{gues.team_b}} {{odds.hhad_fixed}} 球</p>
+                <div flex="dir:left main:justify" v-if="odds.hhad_win!=undefined">
+                    <div flex="dir:top cross:center">
+                        <div flex="dir:top cross:center" class="item" @click="betsWDL('HHDW','2',$event)">
+                            <span class="mt04">{{gues.team_a}} 胜</span>
+                            <span class="fz32">{{odds.hhad_win}}</span>
+                        </div>
+                        <span class="popularity">{{gues.win_h}}%人支持</span>
+                    </div>
+                    <div flex="dir:top cross:center" style="margin: 0rem 0.3rem;">
+                        <div flex="dir:top cross:center" class="item" @click="betsWDL('HHDD','2',$event)">
+                            <span class="mt04">平</span>
+                            <span class="fz32">{{odds.hhad_deuce}}</span>
+                        </div>
+                        <span class="popularity">{{gues.duece_h}}%人支持</span>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <div flex="dir:top cross:center" class="item" @click="betsWDL('HHDL','2',$event)">
+                            <span class="mt04">{{gues.team_b}} 胜</span>
+                            <span class="fz32">{{odds.hhad_lose}}</span>
+                        </div>
+                        <span class="popularity">{{gues.lose_h}}%人支持</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mask hide" @click="hide"></div>
+    <div class="dialog-wrapper hide">
+        <div class="dialog">
+            <div flex="dir:left" class="first-part fz24">
+                <div flex="dir:left cross:center" flex-box="1">
+                    <i class="gold-icon"></i>
+                    <div>可用金币：<span>{{bets.balance}}</span></div>
+                </div>
+                <!--<div flex-box="0" class="fz28">赚金币</div>-->
+            </div>
+            <i class="solid-bb"></i>
+            <div flex="dir:left" class="first-part fz24">
+                <div flex="dir:left cross:center" flex-box="1" class="fz28">
+                    <div v-if="guesTypeId == 1">押注 本场比赛 <span class="emphasize">{{gues.team_a}} {{bets.result_description}}</span>
+                    </div>
+                    <div v-else="guesTypeId == 2">押注 本场比赛 <span class="emphasize">{{gues.team_a}} {{bets.result_description}} 让 {{odds.hhad_fixed}} 球</span>
+                    </div>
+                </div>
+                <div flex-box="0" class="fz24">投注总额<span class="emphasize">{{bets.total_amount}}</span>金币</div>
+            </div>
+            <ul flex="main:justify" class="parent first-part" id="bet">
+                <li flex="main:center cross:center" class="active2" value="500" @click="tab">500金币</li>
+                <li flex="main:center cross:center" value="1000" @click="tab">1000金币</li>
+                <li flex="main:center cross:center" value="2000" @click="tab">2000金币</li>
+            </ul>
+            <div flex="main:center cross:center" class="fz32 first-part betting-btn" @click="touzhu">
+                投注{{betsAmount}}金币
+            </div>
+            <p class="fz28 return-num">预计返还{{returnAmount}}金币</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="layer/mobile/layer.js"></script>
+<script src="js/guessing.js"></script>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="和讯猜球"/>
+    <title>竞猜排名</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/guessingRankings.css">
+    <script src="js/flexible.min.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="rankDetail" v-cloak>
+    <header class="header">
+        <div flex="dir:top main:center cross:center" class="header-content">
+            <div flex="main:center cross:center" class="finished fz28 mt6">已结束</div>
+            <div class="recommend-content">
+                <div flex="dir:left main:justify" class="team-main">
+                    <div flex="dir:top cross:center">
+                        <div flex="main:center cross:center" class="team-icon">
+                            <img v-if="rankDetail.a_icon!=''" :src="rankDetail.a_icon" alt="">
+                            <img v-else src="image/defult.png" alt="">
+                        </div>
+                        <div flex="main:center cross:center" class="team-name">{{rankDetail.team_a}}</div>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <span class="fz24">{{rankDetail.lea_name}}</span>
+                        <div class="vs">vs</div>
+                        <div flex="main:center cross:center" class="deadline">{{rankDetail.m_d}} {{rankDetail.h_m}}截止
+                        </div>
+                    </div>
+                    <div flex="dir:top cross:center">
+                        <div flex="main:center cross:center" class="team-icon">
+                            <!--<img :src="rankDetail.b_icon" alt="">-->
+                            <img v-if="rankDetail.b_icon!=''" :src="rankDetail.b_icon" alt="">
+                            <img v-else src="image/defult.png" alt="">
+                        </div>
+                        <div flex="main:center cross:center" class="team-name">{{rankDetail.team_b}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="my-record" v-if="rankMain != null">
+            <div flex="dir:left cross:center main:justify" class="record-main" >
+                <div flex="cross:center">
+                    <span class="ranking">{{rankMain.inx}}</span>
+                    <img v-if="rankMain.photo!=''" class="photo" :src="rankMain.photo" alt="">
+                    <img v-else src="image/defult.png" alt="">
+                    <span class="">{{rankMain.nick_name}}</span>
+                </div>
+                <div flex="dir:left cross:center" class="gold-info">
+                    <i class="gold-icon"></i>
+                    <span>+{{rankMain.amount}}</span>
+                </div>
+            </div>
+        </div>
+        <p class="tipTtitle fz24">按照单场盈利金币数量排名</p>
+        <ul class="rank" v-if="rankDetail != null" v-for="item,index in rankDetail.item">
+            <li>
+                <div flex="dir:left cross:center main:justify" class="record-main2">
+                    <div flex="cross:center">
+                        <!--<div v-if="item.inx ==1"><img class="top" src="image/first.png" alt="first"></div>-->
+                        <!--<div v-else-if="item.inx ==2"><img class="top" src="image/second.png" alt="second"></div>-->
+                        <!--<div v-else-if="item.inx ==3"><img class="top" src="image/third.png" alt="third"></div>-->
+                        <!--<div v-else><span class="ranking">{{item.inx}}</span></div>-->
+                        <span class="ranking">{{index+1}}</span>
+                        <img v-if="item.photo!=''" class="photo" :src="item.photo" alt="">
+                        <img v-else src="image/defult.png" alt="">
+                        <span class="">{{item.nick_name}}</span>
+                    </div>
+                    <div flex="dir:left cross:center" class="gold-info">
+                        <i class="gold-icon"></i>
+                        <span>+{{item.amount}}</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    function setBG() {
+        var sH = window.innerHeight;
+        var contentH = document.body.clientHeight;
+        if (contentH > sH) {
+            $(".content").css("height", "100%");
+        } else {
+            $(".content").css("height", "9.6rem");
+        }
+    }
+
+    $(function () {
+        setBG();
+    })
+
+
+</script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/guessingRankingsDetail.js"></script>
+</html>

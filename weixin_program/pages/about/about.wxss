@@ -1,0 +1,23 @@
+/* pages/about/about.wxss */
+.about{
+  font-size: 14px;
+  padding: 5px 8px;
+  line-height: 20px;
+  color: #323232;
+}
+.about view{
+  margin-bottom: 10px;
+}
+.about view i{
+  color: #F56056;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+image{
+  width: 130px;
+  height: 130px;
+}

@@ -1,0 +1,233 @@
+html {
+    font-size: 100px;
+    line-height: initial;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+}
+
+body {
+    max-width: 750px;
+    min-width: 320px;
+    font-size: 0.12rem;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    background:#EEEEEE;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.loading{
+    position: absolute;
+    left: 42%;
+    top: 40%;
+    display: none;
+}
+#bet{
+    display: none;
+}
+#bet .title p {
+    text-align: center;
+    width: 80%;
+    line-height: 0.5rem;
+    font-size: 0.36rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#bet .title .img {
+    width: 8%;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    display: table-cell;
+    vertical-align:middle;
+}
+
+#bet .time {
+    padding: 0.2rem 0.2rem;
+    border-radius: 5px;
+    background: #99CBFE;
+    color: #fff;
+    font-size: 0.32rem;
+    margin-bottom: 0.1rem;
+}
+
+#bet .bet_con img {
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+#bet .showlist .oneday img{
+    transform: rotate(-180deg);
+}
+#bet .showlist .oneday .common_list{
+    display: none;
+}
+#bet .showlist .oneday:nth-of-type(1) img{
+    transform: rotate(0deg);
+}
+#bet .showlist .oneday:nth-of-type(1) .common_list{
+    display: block;
+}
+#bet .showlist {
+    margin-bottom: 1.8rem;
+    background: #EEEEEE;
+}
+
+#bet .list {
+    padding: 0.2rem 0.2rem 0rem;
+}
+
+#bet .list .vs {
+    width: 80%;
+}
+
+#bet .list .vs .team {
+    width: 45%;
+    font-size: 0.24rem;
+    text-align: center;
+    font-size: 0.26rem;
+}
+
+#bet .list .vs .team p:nth-of-type(1) {
+    font-size: 0.3rem;
+    color: #FF5961;
+    /*margin-bottom: 0.1rem;*/
+}
+
+#bet .list .vs .clash {
+    width: 10%;
+    text-align: center;
+    font-size: 0.36rem;
+    margin:-0.06rem 0rem 0rem;
+    /*line-height: 0.4rem;*/
+}
+
+#bet .list .datalist {
+    width: 100%;
+    margin: 0.12rem 0rem 0.2rem;
+}
+
+#bet .list .number {
+    width: 20%;
+    font-size: 0.3rem;
+    padding-top: 0.1rem;
+}
+
+#bet .list .number p {
+    line-height: 0.4rem;
+    font-size: 0.26rem;
+}
+
+#bet .list .data {
+    width: 76%;
+    background: #fff;
+}
+
+#bet .list .data ul {
+    border: 1px solid #E1E1E1;
+}
+
+#bet .list .data ul li {
+    float: left;
+    width: 27%;
+    line-height: 0.7rem;
+    text-align: center;
+    font-size: 0.3rem;
+    border-right: 1px solid #E1E1E1;
+
+}
+
+#bet .list .data ul li:nth-of-type(4), #bet .list .data ul li:nth-of-type(8) {
+    border-right: none;
+}
+
+#bet .list .data ul li:nth-of-type(1), #bet .list .data ul li:nth-of-type(5) {
+    width: 17.65%;
+}
+
+#bet .list .data ul li:nth-child(n+5) {
+    border-bottom: none;
+}
+#bet .list .data ul:nth-of-type(1){
+    border-bottom: none;
+    border-top: none;
+}
+#bet .list .data ul:nth-of-type(1) li{
+    border-top: 1px solid #E1E1E1;
+}
+/*#bet .list .data ul li.Single{*/
+    /*background: url(../images/single.png) 0rem top no-repeat;*/
+    /*background-size: 50%;*/
+/*}*/
+#bet .list .data  .singleSelect{
+    background: url(../images/single.png) 0rem top no-repeat;
+    background-size: 10%;
+}
+#bet .list .data ul li.active{
+    background: #1E8CFF;
+    color: #fff;
+}
+#bet .foot {
+    position: fixed;
+    bottom: 0px;
+    width:7.5rem;
+    background: #fff;
+    display: none;
+}
+
+#bet .foot .price {
+    padding: 0.15rem 0.2rem;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+#bet .foot .price span i {
+    color: #FF5961;
+}
+
+#bet .foot .price span {
+    font-size: 0.3rem;
+    display: inline-block;
+    margin: 0rem 0.3rem 0rem 0.3rem;
+}
+
+#bet .foot .submit {
+    padding: 0.15rem 0.2rem;
+}
+
+#bet .foot .submit span, #bet .foot .submit input {
+    display: inline-block;
+    width: 1rem;
+    line-height: 0.7rem;
+    text-align: center;
+    font-size: 0.32rem;
+    border-radius: 5px;
+    border: 1px solid #E1E1E1;
+    outline: none;
+    color: #999999;
+}
+
+#bet .foot .submit em {
+    display: inline-block;
+    /*width: 1rem;*/
+    line-height: 0.8rem;
+    color: #999999;
+}
+#bet .foot .submit em i{
+    color:#FF5961;
+    font-size: 0.12rem;
+}
+#bet .foot .submit a{
+    display: inline-block;
+    width:2.2rem;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.32rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#bet .foot .submit a.forbidden{
+    background: #cecece;
+}
+#bet .foot .submit a.normal{
+    background: #FF5961;
+}

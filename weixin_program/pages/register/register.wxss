@@ -1,0 +1,56 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.need_status{
+  padding: 15px 15px;
+  line-height: 30px;
+  font-size: 16px;
+}
+.container {
+  padding: 60px 0px 60px;
+  font-size: 14px;
+}
+
+label image {
+  width: 20px;
+  height: 20px;
+}
+
+label {
+  float: left;
+  margin-right: 10px;
+}
+
+input {
+  border-bottom: 1px solid #cecece;
+  flex: 1;
+}
+.yzm input{
+  width:150px;
+}
+.get-code{
+  /* width: 30%; */
+  width: 118px;
+  margin-top: -22px;
+}
+.field {
+  display: flex;
+  margin:30px auto;
+}
+
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+.btn_login{
+  width: 95%;
+}

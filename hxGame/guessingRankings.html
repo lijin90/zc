@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="和讯猜球"/>
+    <title>竞猜排名</title>
+    <link rel="shortcut icon" href="image/favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/guessingHistory.css">
+    <script src="js/flexible.min.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="rank" v-cloak>
+    <div class="content">
+        <i class="guessingRankings"></i>
+        <i class="eventRecord"></i>
+        <div v-if="rankList.length!=0">
+            <ul class="eventRecordList" v-for="item in rankList">
+                <li flex="dir:top main:center" @click="turnToDetail(item.gues_disc_id,item.user_key)">
+                    <div flex="main:justify">
+                        <div flex="dir:left" class="national">
+                            <span class="fz28">{{item.lea_name}} {{item.pt}} 结束</span>
+                        </div>
+                        <div class="finished fz24">已结束</div>
+                    </div>
+
+                    <hr class="solid"></hr>
+
+                    <div flex="dir:left main:justify">
+                        <div flex="dir:left cross:center" class="national">
+                            <img class="national-flag" :src="item.a_icon" alt="">
+                            <img class="national-flag ml-1" :src="item.b_icon" alt="">
+                            <span class="fz28 ml1">{{item.team_a}} VS {{item.team_b}}</span>
+                        </div>
+                        <hr class="solid2"></hr>
+                        <div flex="dir:left cross:center" class="national">
+                            <img class="national-flag" :src="item.photo" alt="" v-if="item.user_key != ''">
+                            <img class="national-flag" src="image/user_default.png" alt="" v-else>
+                            <span class="fz28 ml1" v-if="item.user_key != ''">{{item.nick_name}}</span>
+                            <span class="fz28 ml1" v-else>无用户参与竞猜</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div v-else class="data-show" ref="dataShow">
+            <div flex="dir:top cross:center main:center" class="no-data">
+                <i></i>
+                <span>暂无赛事记录</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $(".guessinghistory").on("click", "li", function () {
+        window.location.href = "./guessingDetails.html"
+    })
+</script>
+<script src="layer/mobile/layer.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/guessingRankings.js"></script>
+</html>
+
