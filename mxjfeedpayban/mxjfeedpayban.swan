@@ -1,0 +1,3 @@
+<block s-if="{{showWebview}}">
+<web-view src="{{baseH5Url}}?accessToken={{accessToken}}&openId={{openId}}&mxj={{mxj}}&createAccountFlag={{createAccountFlag}}&authStatus={{authStatus}}&cypherData={{cypherData}}&cypherIv={{cypherIv}}&longitude={{longitude}}&latitude={{latitude}}&payBanWhiteList={{payBanWhiteList}}&functionalEntrance={{functionalEntrance}}&channel={{channel}}&swanId={{swanId}}&showBackIcon={{showBackIcon}}&devVersion={{appkey_dev}}"></web-view>
+</block>
